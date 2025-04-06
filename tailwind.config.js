@@ -19,13 +19,16 @@ export default {
       addUtilities({
         '.transition-bg': {
           'transition-property': 'transform, background-color',
-          
+          'transition-duration': '150ms',
+          'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
         },
       });
 
       addUtilities({
         '.transition-bg-2': {
-          'transition-property': 'transform, filter, opacity',
+          'transition-property': 'opacity, transform filter',
+          'transition-duration': '150ms',
+          'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
           },
       });
 

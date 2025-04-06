@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Navbar from "./Navbar";
 
-const Header=() => {
+const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
@@ -11,36 +11,37 @@ const Header=() => {
                     <a
                         href="/" className="logo"
                     >
-                        <img 
+                        <img
                             src="/images/logo.svg"
-                            width={40} 
+                            width={40}
                             height={40}
                             alt="Shambhavi Goyal" />
                     </a>
-                </h1> 
-                
-                
+                </h1>
+
+
                 <div className="relative md:justify-self-center">
-                    <button 
+                    <button
                         className="menu-btn md:hidden"
-                        onClick={()=> setNavOpen((prev)=>!prev)}
+                        onClick={() => setNavOpen((prev) => !prev)}
                     >
                         <span className="material-symbols-rounded">{navOpen ? 'close' : 'menu'}</span>
                     </button>
+
                     <Navbar navOpen={navOpen} />
                 </div>
-                
+
                 <a
-                href="#Contact"
-                className='btn btn-secondary max-md:hidden md:justify-self-end'
-                > 
+                    href="#Contact"
+                    className="btn btn-secondary max-md:hidden md:justify-self-end"
+                >
                     Contact Me
                 </a>
-        
-                
-        </div>
-      </header>
-   
+
+
+            </div>
+        </header>
+
     )
 }
 
