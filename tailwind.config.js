@@ -38,6 +38,11 @@ export default {
           'transition-duration': '500',
           },
       });
+      addUtilities({
+        '.transition-bg-4': {
+          'transition-property': 'background-color',
+          },
+      });
     }
   ]
 }
