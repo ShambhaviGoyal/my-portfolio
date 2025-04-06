@@ -26,7 +26,7 @@ const Hero = () => {
                     </div>
 
                     <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                    Building Scalable Modern Websites for the Future
+                    Full-Stack Web Development for the Modern Digital Age
                     </h2>
 
                     <div className="flex items-center gap-3">
