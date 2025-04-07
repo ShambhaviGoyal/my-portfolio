@@ -32,7 +32,7 @@ const Education = () => {
         <h2 className="headline-2">Education</h2>
         <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
         Below are my academic details along with relevant coursework I’ve completed. I’m always eager to learn and continuously expand my knowledge in the field of computer science.
-        </p>
+        </p>m
 
         {educationGroups.map(({ category, items }, groupIndex) => (
           <div key={groupIndex} className="mb-10">
