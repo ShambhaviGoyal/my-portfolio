@@ -103,3 +103,13 @@ body{
 .btn-outline{
   @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
 }
+
+/* Reduce bottom padding for the Skills section */
+#skills {
+  padding-bottom: 2rem; /* Reduce this value to decrease space */
+}
+
+/* Reduce top padding for the Education section */
+#education {
+  padding-top: 2rem; /* Reduce this value to decrease space */
+}
