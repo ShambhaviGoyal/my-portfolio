@@ -34,6 +34,16 @@ const skillGroups = [
         label: "CSS",
         desc: "User Interface",
       },
+      {
+        imgSrc: "images/mips.svg", 
+        label: "MIPS",
+        desc: "Assembly Language",
+      },
+      {
+        imgSrc: "images/vhdl-svgrepo-com.svg",
+        label: "VHDL",
+        desc: "Hardware Description Language",
+      },
     ],
   },
   {
