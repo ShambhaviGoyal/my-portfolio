@@ -1,4 +1,5 @@
 import { ButtonPrimary, ButtonOutline } from "./Button.jsx";
+import bigPFP from "/images/IMG_2819-Picsart-BackgroundRemover.jpeg";
 
 const Hero = () => {
     return (
@@ -46,7 +47,7 @@ const Hero = () => {
                 <div className="hidden lg:block">
                     <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-400/50 via-100% to-transparent to-85% rounded-[60px] overflow-hidden ">
                         <img
-                            src="public\images\IMG_2819-Picsart-BackgroundRemover.JPEG"
+                            src={bigPFP}
                             width={656}
                             height={800}
                             alt="Shambhavi Goyal"
