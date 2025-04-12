@@ -8,7 +8,7 @@ const Hero = () => {
                     <div className="flex items-center gap-3">
                         <figure className="img-box w-9 h-9 rounded-lg">
                             <img
-                                src="/images/avatar-1.jpg"
+                                src="public\images\IMG_8010.JPEG"
                                 width={40}
                                 height={40}
                                 alt="Shambhavi Goyal portrait"
@@ -16,33 +16,41 @@ const Hero = () => {
                             />
                         </figure>
 
-                        <div className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
+                        <div className="flex items-center gap-1.5 text-zinc-300 text-large tracking-wide">
                             <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                             </span>
                             
-                            Available for work
+                            Looking for Internships
                         </div>
                     </div>
 
-                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                    Full-Stack Web Development for the Modern Digital Age
+                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-4">
+                    Shambhavi Goyal
                     </h2>
+                    <h4 className="headline-2 max-w-full mb-3">
+                    CSE @ University at Buffalo
+                    </h4>
+                    <h6 className= "lg:text-base text-zinc-400 max-w-full mb-4 bold">
+                    A full-stack developer looking for summer internships
+                    </h6>
+
+
 
                     <div className="flex items-center gap-3">
-                        <ButtonPrimary label="Download CV" icon="download" />
+                        <ButtonPrimary label="Download Resume" icon="download" href="public\images\Shambhavi Goyal Resume.pdf" target="_blank" />
                         <ButtonOutline href="#about" label="Scroll down" icon="arrow_downward" />
                     </div>
                 </div>
 
                 <div className="hidden lg:block">
-                    <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden ">
+                    <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-400/50 via-100% to-transparent to-85% rounded-[60px] overflow-hidden ">
                         <img
                             src="public\images\IMG_2819-Picsart-BackgroundRemover.JPEG"
                             width={656}
                             height={800}
                             alt="Shambhavi Goyal"
-                            className="w-full"
+                            className="w-full h-full object-cover"
                         />
                     </figure>
                 </div>

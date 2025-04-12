@@ -10,7 +10,7 @@ const ButtonPrimary = ({
 }) => {
   if (href) {
     return (
-      <a href={href} target={target} className={"btn btn-primary " + classes}>
+      <a href={href} target={target} rel={target === '_blank' ? "noopener noreferrer" : undefined}  className={"btn btn-primary " + classes}>
         {label}
 
         {icon ?

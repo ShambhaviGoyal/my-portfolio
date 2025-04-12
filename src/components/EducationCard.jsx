@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 
-const EducationCard = ({ degree, institution, graduating, logo, course }) => {
+const EducationCard = ({ degree, institution, graduating, logo, course, GPA }) => {
     return (
-      <div className="flex gap-4 items-start ring-2 ring-inset ring-zinc-50/10 rounded-2xl p-4 hover:bg-zinc-800 transition-colors group">
+      <div className="flex gap-4 items-start ring-2 ring-inset ring-zinc-50/10 rounded-2xl p-6 hover:bg-zinc-800 transition-colors group">
         {course ? (
           <div className="text-sm text-zinc-300">{course}</div>
         ) : (
@@ -15,9 +15,12 @@ const EducationCard = ({ degree, institution, graduating, logo, course }) => {
               />
             </figure>
             <div>
-              <h3 className="text-base font-semibold text-zinc-300">{degree}</h3>
-              <p className="text-sm text-zinc-400">{institution}</p>
-              <p className="text-sm text-zinc-500">{graduating}</p>
+              <h3 className="text-lg font-semibold text-zinc-300">{degree}</h3>
+              <p className="text-base text-zinc-300">{institution}</p>
+              <p className="text-base text-zinc-300">{graduating}</p>
+              <p className="text-base text-zinc-300">GPA: {GPA}</p> 
+
+  
             </div>
           </>
         )}
@@ -32,6 +35,7 @@ const EducationCard = ({ degree, institution, graduating, logo, course }) => {
         graduating: PropTypes.string,
         logo: PropTypes.string,
         course: PropTypes.string,
+        GPA: PropTypes.string
         };
 
   export default EducationCard;

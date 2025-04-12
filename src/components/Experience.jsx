@@ -42,14 +42,15 @@ const Experience = () => {
   return (
     <section id="experience" className="section">
       <div className="container">
-        <h2 className="headline-2">Work Experience</h2>
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
-          Here's a snapshot of my professional experience during my time at UB.
+        <h2 className="headline-2 reveal-up">Work Experience</h2>
+        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+        Here's a snapshot of my professional experience.
         </p>
         <div>
           {experienceGroups.map((job, idx) => (
-            <ExperienceCard key={idx} {...job} />
+            <ExperienceCard key={idx} {...job} index={idx} />
           ))}
+
         </div>
       </div>
     </section>
