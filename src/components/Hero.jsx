@@ -1,6 +1,6 @@
 import { ButtonPrimary, ButtonOutline } from "./Button.jsx";
-import smallPFP from '/src/images/IMG_8010.jpg'
-import bigPFP from "/src/images/IMG_2819-Picsart-BackgroundRemover.jpeg";
+import smallPFP from '../images/IMG_8010.jpg'
+import bigPFP from "../images/IMG_2819-Picsart-BackgroundRemover.jpeg";
 
 const Hero = () => {
     return (

@@ -1,5 +1,5 @@
 import { ButtonPrimary } from "./Button";
-import logo from "/src/images/logo.svg"; 
+import logo from "../images/logo.svg"; 
 
 const sitemap = [
     {

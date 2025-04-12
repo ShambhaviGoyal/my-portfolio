@@ -1,4 +1,5 @@
 import EducationCard from "./EducationCard";
+import ublogo from "../images/ublogo (1).png"; 
 
 const educationGroups = [
   {
@@ -9,7 +10,7 @@ const educationGroups = [
         institution: "University at Buffalo",
         graduating: "2023-2027",
         GPA: "3.9",
-        logo: "images/ublogo (1).png",
+        logo: ublogo
       
       },
     ],

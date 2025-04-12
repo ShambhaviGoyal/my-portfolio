@@ -1,21 +1,25 @@
 import ProjectCard from "./ProjectCard";
+import quizlogo from '../images/project-1.jpg'; 
+import gameOfLifeLogo from '../images/project-2.jpg'; 
+import recipeWebsite from '../images/project-3.jpg'; 
+
 
 const projects = [
     {
-      imgSrc: 'src/images/project-1.jpg',
+      imgSrc: quizlogo,
       title: 'Quiz Website',
       tags: ['JS', 'HTML', 'CSS'],
       githubLink: 'https://github.com/ShambhaviGoyal/quiz-app',
       projectLink: 'https://shambhavigoyal-quizapp.netlify.app/'
     },
     {
-      imgSrc: 'src/images/project-2.jpg',
+      imgSrc: gameOfLifeLogo,
       title: "Alice's Game Of Life",
       tags: ['C++'],
       githubLink: 'https://github.com/WhiteWolf1603/alices-game-of-life/blob/main/README.md'
     },
     {
-      imgSrc: 'src/images/project-3.jpg',
+      imgSrc: recipeWebsite,
       title: 'Recipe Website',
       tags: ['JS', 'HTML', 'CSS'],
       githubLink: 'https://github.com/ShambhaviGoyal/recipeWebsite', 

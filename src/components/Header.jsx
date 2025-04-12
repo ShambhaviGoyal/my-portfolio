@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Navbar from "./Navbar";
-import logo from "/src/images/logo.svg"
+import logo from "../images/logo.svg"
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
