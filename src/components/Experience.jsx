@@ -13,7 +13,7 @@ const experienceGroups = [
     company: "Thomas J. Edwards Undergraduate Learning Center",
     duration: "Sep 2024 – Present · 8 mos",
     location: "Buffalo, New York, United States",
-    description: "Provided support and tutoring to 100+ students in Precalculus, Calculus 1 & 2, Algebra, and Business Math courses. Helped students understand math concepts, fostering strong fundamentals and promoting independent learning."
+    description: "Provided support and tutoring to 100+ students in Advanced Calculus, Linear Algebra, and Business Math courses. Helped students understand math concepts, fostering strong fundamentals and promoting independent learning."
   },
   {
     title: "Resident Advisor",

@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 const Navbar = ({navOpen}) => {
     const lastActiveLink = useRef();    
     const activeBox = useRef();
+    const navRefs = useRef({});
+    const sectionRefs = useRef({});
+  
     const initActiveBox=()=>{
       activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
       activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';

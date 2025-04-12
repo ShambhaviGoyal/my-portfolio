@@ -3,7 +3,7 @@ import c from "../images/C_Programming_Language.svg";
 import java from "../images/java-4-logo-svgrepo-com.svg"; 
 import python from "../images/python-svgrepo-com.svg";
 import javascript from "../images/javascript.svg"; 
-import html from "../images/html5-01-svgrepo-com.svg";
+import html from "../images/html-5-logo-svgrepo-com (1).svg";
 import css from "../images/css3.svg"; 
 import mips from  "../images/mips.svg";
 import vhdl from  "../images/vhdl-svgrepo-com.svg";
@@ -16,6 +16,7 @@ import mongodb from "../images/mongodb.svg";
 import mysql from  "../images/mysql-logo-svgrepo-com.svg";
 import linux from "../images/linux-svgrepo-com.svg";
 import windows from  "../images/windows-applications-svgrepo-com.svg";
+import vite from "../images/vite-svgrepo-com.svg"; 
 
 const skillGroups = [
   {
@@ -91,6 +92,11 @@ const skillGroups = [
         label: "Bootstrap",
         desc: "CSS Framework",
       },
+      {
+        imgSrc: vite,  // Add Vite here!
+        label: "Vite",
+        desc: "Build Tool / Development Server",
+      },
     ],
   },
   {
@@ -124,6 +130,7 @@ const skillGroups = [
     ],
   },
 ];
+
 
 const Skill = () => {
   return (

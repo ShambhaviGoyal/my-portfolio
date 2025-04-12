@@ -1,6 +1,8 @@
 import { ButtonPrimary, ButtonOutline } from "./Button.jsx";
 import smallPFP from '../images/IMG_8010.jpg'
 import bigPFP from "../images/IMG_2819-Picsart-BackgroundRemover.jpeg";
+import resume from "../images/Latex resume.pdf";
+
 
 const Hero = () => {
     return (
@@ -40,17 +42,17 @@ const Hero = () => {
 
 
                     <div className="flex items-center gap-3">
-                        <ButtonPrimary label="Download Resume" icon="download" href="public\images\Shambhavi Goyal Resume.pdf" target="_blank" />
-                        <ButtonOutline href="#about" label="Scroll down" icon="arrow_downward" />
+                        <ButtonPrimary label="Download Resume" icon="download" href={resume} target="_blank" />
+                        <ButtonPrimary href="#about" label="About Me!" icon="arrow_downward" />
                     </div>
                 </div>
 
                 <div className="hidden lg:block">
-                    <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-400/50 via-100% to-transparent to-85% rounded-[60px] overflow-hidden ">
+                    <figure className="w-full max-w-[370px] ml-auto bg-gradient-to-t from-sky-400 via-sky-400/50 via-100% to-transparent to-85% rounded-[60px] overflow-hidden ">
                         <img
                             src={bigPFP}
-                            width={656}
-                            height={800}
+                            width={650}
+                            height={500}
                             alt="Shambhavi Goyal"
                             className="w-full h-full object-cover"
                         />

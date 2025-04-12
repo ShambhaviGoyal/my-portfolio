@@ -18,12 +18,12 @@ const educationGroups = [
   {
     category: "Relevant Coursework",
     items: [
-      { course: "Python Programming" },
-      { course: "Object Oriented Programming" },
       { course: "Systems Programming" },
-      { course: "Data Structures & Algorithms" },
       { course: "Computer Architecture" },
-      { course: "Algorithms & Complexity" },
+      { course: "Data Structures"},
+      { course: "Algorithms"},
+      { course: "Object Oriented Programming" },      
+      { course: "Python Programming" }
     ],
   },
 ];
