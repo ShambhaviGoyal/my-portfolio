@@ -1,3 +1,5 @@
+import logo from '/src/images/logo.svg'; 
+
 const aboutItems = [
     {
       label: 'Project done',
@@ -33,7 +35,7 @@ const About = () => {
                         ))
                     }
 
-                    <img src="/images/logo.svg" alt="logo" width={30} height={30} className="ml-auto md:w-[40px] md:h-[40px]" />
+                    <img src={logo} alt="logo" width={30} height={30} className="ml-auto md:w-[40px] md:h-[40px]" />
 
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import { ButtonPrimary, ButtonOutline } from "./Button.jsx";
-import bigPFP from "/images/IMG_2819-Picsart-BackgroundRemover.jpeg";
+import smallPFP from '/src/images/IMG_8010.jpg'
+import bigPFP from "/src/images/IMG_2819-Picsart-BackgroundRemover.jpeg";
 
 const Hero = () => {
     return (
@@ -9,7 +10,7 @@ const Hero = () => {
                     <div className="flex items-center gap-3">
                         <figure className="img-box w-9 h-9 rounded-lg">
                             <img
-                                src="public\images\IMG_8010.JPEG"
+                                src={smallPFP}
                                 width={40}
                                 height={40}
                                 alt="Shambhavi Goyal portrait"

@@ -5,42 +5,42 @@ const skillGroups = [
     category: "Programming Languages",
     items: [
       {
-        imgSrc: "images/C_Programming_Language.svg",
+        imgSrc: "/src/images/C_Programming_Language.svg",
         label: "C",
         desc: "Programming Language",
       },
       {
-        imgSrc: "images/java-4-logo-svgrepo-com.svg",
+        imgSrc: "/src/images/java-4-logo-svgrepo-com.svg",
         label: "Java",
         desc: "Programming Language",
       },
       {
-        imgSrc: "images/python-svgrepo-com.svg",
+        imgSrc: "/src/images/python-svgrepo-com.svg",
         label: "Python",
         desc: "Programming Language",
       },
       {
-        imgSrc: "/images/javascript.svg",
+        imgSrc: "/src/images/javascript.svg",
         label: "JavaScript",
         desc: "Interaction",
       },
       {
-        imgSrc: "/images/html5-01-svgrepo-com.svg",
+        imgSrc: "/src/images/html5-01-svgrepo-com.svg",
         label: "HTML",
         desc: "Markup Language",
       },
       {
-        imgSrc: "/images/css3.svg",
+        imgSrc: "/src/images/css3.svg",
         label: "CSS",
         desc: "User Interface",
       },
       {
-        imgSrc: "images/mips.svg", 
+        imgSrc: "/src/images/mips.svg", 
         label: "MIPS",
         desc: "Assembly Language",
       },
       {
-        imgSrc: "images/vhdl-svgrepo-com.svg",
+        imgSrc: "/src/images/vhdl-svgrepo-com.svg",
         label: "VHDL",
         desc: "Hardware Description Language",
       },
@@ -50,27 +50,27 @@ const skillGroups = [
     category: "Frameworks & Libraries",
     items: [
       {
-        imgSrc: "/images/react.svg",
+        imgSrc: "/src/images/react.svg",
         label: "React",
         desc: "JavaScript Library",
       },
       {
-        imgSrc: "/images/nodejs.svg",
+        imgSrc: "/src/images/nodejs.svg",
         label: "NodeJS",
         desc: "Web Server",
       },
       {
-        imgSrc: "/images/expressjs.svg",
+        imgSrc: "/src/images/expressjs.svg",
         label: "ExpressJS",
         desc: "Node Framework",
       },
       {
-        imgSrc: "/images/tailwindcss.svg",
+        imgSrc: "/src/images/tailwindcss.svg",
         label: "TailwindCSS",
         desc: "UI Framework",
       },
       {
-        imgSrc: "images/bootstrap-svgrepo-com.svg",
+        imgSrc: "/src/images/bootstrap-svgrepo-com.svg",
         label: "Bootstrap",
         desc: "CSS Framework",
       },
@@ -80,12 +80,12 @@ const skillGroups = [
     category: "Databases",
     items: [
       {
-        imgSrc: "/images/mongodb.svg",
+        imgSrc: "/src/images/mongodb.svg",
         label: "MongoDB",
         desc: "NoSQL Database",
       },
       {
-        imgSrc: "images/mysql-logo-svgrepo-com.svg",
+        imgSrc: "/src/images/mysql-logo-svgrepo-com.svg",
         label: "MySQL",
         desc: "Relational Database",
       },
@@ -95,12 +95,12 @@ const skillGroups = [
     category: "Operating Systems",
     items: [
       {
-        imgSrc: "images/linux-svgrepo-com.svg",
+        imgSrc: "/src/images/linux-svgrepo-com.svg",
         label: "Linux",
         desc: "Operating System",
       },
       {
-        imgSrc: "images/windows-applications-svgrepo-com.svg",
+        imgSrc: "/src/images/windows-applications-svgrepo-com.svg",
         label: "Windows",
         desc: "Operating System",
       },

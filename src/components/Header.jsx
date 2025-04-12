@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Navbar from "./Navbar";
-import smallPFP from "/images/logo.svg";
+import logo from "/src/images/logo.svg"
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
                         href="/" className="logo"
                     >
                         <img
-                            src={smallPFP}
+                            src={logo}
                             width={40}
                             height={40}
                             alt="Shambhavi Goyal" />

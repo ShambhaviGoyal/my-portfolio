@@ -2,20 +2,20 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
     {
-      imgSrc: '/images/project-1.jpg',
+      imgSrc: 'src/images/project-1.jpg',
       title: 'Quiz Website',
       tags: ['JS', 'HTML', 'CSS'],
       githubLink: 'https://github.com/ShambhaviGoyal/quiz-app',
       projectLink: 'https://shambhavigoyal-quizapp.netlify.app/'
     },
     {
-      imgSrc: '/images/project-2.jpg',
+      imgSrc: 'src/images/project-2.jpg',
       title: "Alice's Game Of Life",
       tags: ['C++'],
       githubLink: 'https://github.com/WhiteWolf1603/alices-game-of-life/blob/main/README.md'
     },
     {
-      imgSrc: '/images/project-3.jpg',
+      imgSrc: 'src/images/project-3.jpg',
       title: 'Recipe Website',
       tags: ['JS', 'HTML', 'CSS'],
       githubLink: 'https://github.com/ShambhaviGoyal/recipeWebsite', 
