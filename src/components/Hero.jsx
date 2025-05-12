@@ -54,8 +54,8 @@ const Hero = () => {
                             width={650}
                             height={500}
                             alt="Shambhavi Goyal"
-                            className="w-full h-full object-cover"
-                        />
+                            className="w-full h-full object-cover translate-x-4"
+                            />
                     </figure>
                 </div>
 
