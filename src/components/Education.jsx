@@ -11,7 +11,6 @@ const educationGroups = [
         graduating: "2023-2027",
         GPA: "3.9",
         logo: ublogo
-      
       },
     ],
   },
@@ -20,8 +19,8 @@ const educationGroups = [
     items: [
       { course: "Systems Programming" },
       { course: "Computer Architecture" },
-      { course: "Data Structures"},
-      { course: "Algorithms"},
+      { course: "Data Structures" },
+      { course: "Algorithms" },
       { course: "Object Oriented Programming" },      
       { course: "Python Programming" }
     ],
@@ -34,15 +33,22 @@ const Education = () => {
       <div className="container">
         <h2 className="headline-2 reveal-up">Education</h2>
         <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-        Below are my academic details along with relevant coursework I’ve completed. I’m always eager to learn and continuously expand my knowledge in the field of computer science.
+          Below are my academic details along with relevant coursework I’ve completed. I’m always eager to learn and continuously expand my knowledge in the field of computer science.
         </p>
 
         {educationGroups.map(({ category, items }, groupIndex) => (
           <div key={groupIndex} className="mb-10">
             <h3 className="text-lg font-semibold text-zinc-300 mb-4">{category}</h3>
-            <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]">
+            {/* FIXED 3 COLUMN GRID */}
+            <div className="grid gap-3 grid-cols-3">
               {items.map((item, itemIndex) => (
-                <EducationCard key={`${groupIndex}-${itemIndex}`} {...item} classes="reveal-up" />
+                <EducationCard 
+                  key={`${groupIndex}-${itemIndex}`} 
+                  {...item} 
+                  classes="reveal-up" 
+                  // Span all 3 columns for first group Program Details to make it wider
+                  colSpan={groupIndex === 0 ? 3 : 1} 
+                />
               ))}
             </div>
           </div>
