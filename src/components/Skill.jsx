@@ -1,22 +1,24 @@
 import SkillCard from "./SkillCard";
-import c from "../images/C_Programming_Language.svg"; 
-import java from "../images/java-4-logo-svgrepo-com.svg"; 
-import python from "../images/python-svgrepo-com.svg";
+import c from "../images/C.svg"; 
+import csharp from "../images/csharp.png";
+import java from "../images/java.svg"; 
+import python from "../images/python.svg";
 import javascript from "../images/javascript.svg"; 
-import html from "../images/html-5-logo-svgrepo-com (1).svg";
-import css from "../images/css3.svg"; 
+import html from "../images/html.svg";
+import css from "../images/css.svg"; 
 import mips from  "../images/mips.svg";
-import vhdl from  "../images/vhdl-svgrepo-com.svg";
+import vhdl from  "../images/vhdl.svg";
 import react from "../images/react.svg";
 import nodejs from "../images/nodejs.svg";
 import expressjs from "../images/expressjs.svg";
 import tailwindcss from "../images/tailwindcss.svg"; 
-import bootstrap from  "../images/bootstrap-svgrepo-com.svg";
+import bootstrap from  "../images/bootstrap.svg";
 import mongodb from "../images/mongodb.svg"; 
-import mysql from  "../images/mysql-logo-svgrepo-com.svg";
-import linux from "../images/linux-svgrepo-com.svg";
-import windows from  "../images/windows-applications-svgrepo-com.svg";
-import vite from "../images/vite-svgrepo-com.svg"; 
+import mysql from  "../images/mysql.svg";
+import linux from "../images/linux.svg";
+import windows from  "../images/windows.svg";
+import vite from "../images/vite.svg"; 
+import tensorflow from "../images/tensorflow.svg";
 
 const skillGroups = [
   {
@@ -27,6 +29,11 @@ const skillGroups = [
         label: "C",
         desc: "Programming Language",
       },
+      {
+        imgSrc: csharp,
+        label: "C#",
+        desc: "Programming Language",
+      },    
       {
         imgSrc: java,
         label: "Java",
@@ -93,9 +100,14 @@ const skillGroups = [
         desc: "CSS Framework",
       },
       {
-        imgSrc: vite,  // Add Vite here!
+        imgSrc: vite, 
         label: "Vite",
         desc: "Build Tool / Development Server",
+      },
+      {
+      imgSrc: tensorflow,
+      label: "TensorFlow",
+      desc: "Deep Learning Framework",
       },
     ],
   },

@@ -1,7 +1,7 @@
 import ProjectCard from "./ProjectCard";
-import quizlogo from '../images/project-1.jpg'; 
-import gameOfLifeLogo from '../images/project-2.jpg'; 
-import recipeWebsite from '../images/project-3.jpg'; 
+import quizlogo from '../images/project-quiz.jpg'; 
+import gameOfLifeLogo from '../images/project-gameOfLife.jpg'; 
+import recipeWebsite from '../images/project-recipe.jpg'; 
 
 
 const projects = [

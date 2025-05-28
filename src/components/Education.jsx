@@ -1,5 +1,5 @@
 import EducationCard from "./EducationCard";
-import ublogo from "../images/ublogo (1).png"; 
+import ublogo from "../images/ublogo.png"; 
 
 const educationGroups = [
   {

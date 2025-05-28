@@ -1,7 +1,7 @@
 import { ButtonPrimary, ButtonOutline } from "./Button.jsx";
-import smallPFP from '../images/IMG_8010.jpg'
-import bigPFP from "../images/IMG_2819-Picsart-BackgroundRemover.jpeg";
-import resume from "../images/Latex resume.pdf";
+import smallPFP from '../images/mySmallLogo.jpg'
+import bigPFP from "../images/myProfilePicture.jpeg";
+import resume from "../images/resume.pdf";
 
 
 const Hero = () => {
@@ -47,17 +47,20 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hidden lg:block">
-                    <figure className="w-full max-w-[370px] ml-auto bg-gradient-to-t from-sky-400 via-sky-400/50 via-100% to-transparent to-85% rounded-[60px] overflow-hidden ">
-                        <img
-                            src={bigPFP}
-                            width={650}
-                            height={500}
-                            alt="Shambhavi Goyal"
-                            className="w-full h-full object-cover translate-x-4"
-                            />
-                    </figure>
-                </div>
+                <div className="hidden lg:flex flex-col items-center">
+  <figure className="w-full max-w-[400px] relative rounded-full p-1 bg-gradient-to-br from-sky-400 via-blue-500 to-purple-500">
+    <img
+      src={bigPFP}
+      alt="Shambhavi Goyal"
+      className="w-full h-full object-cover object-top rounded-full"
+    />
+  </figure>
+
+  <p className="text-zinc-400 italic text-lg mt-6 text-center">
+    “Code, create, and caffeinate ☕”
+  </p>
+</div>
+
 
             </div>
         </section>
