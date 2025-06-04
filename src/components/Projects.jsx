@@ -2,6 +2,7 @@ import ProjectCard from "./ProjectCard";
 import quizlogo from '../images/project-quiz.jpg'; 
 import gameOfLifeLogo from '../images/project-gameOfLife.jpg'; 
 import recipeWebsite from '../images/project-recipe.jpg'; 
+import taskManager from '../images/task-manager.jpg'; 
 
 
 const projects = [
@@ -24,7 +25,14 @@ const projects = [
       tags: ['JS', 'HTML', 'CSS'],
       githubLink: 'https://github.com/ShambhaviGoyal/recipeWebsite', 
       projectLink: 'https://sg-recipewebsite.netlify.app/'
-    }
+    }, 
+    {
+      imgSrc: taskManager,
+      title: 'Task Manager App',
+      tags: ['JS', 'HTML', 'CSS', 'MongoDB', 'REST API'],
+      githubLink: 'https://github.com/ShambhaviGoyal/task-manager'
+    },
+
     
 ];
 
