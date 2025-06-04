@@ -19,6 +19,11 @@ import linux from "../images/linux.svg";
 import windows from  "../images/windows.svg";
 import vite from "../images/vite.svg"; 
 import tensorflow from "../images/tensorflow.svg";
+import springboot from "../images/springboot.svg"; 
+import postman from "../images/postman.svg"; 
+import restapi from "../images/restapi.svg" ; 
+import ml from "../images/machine-learning.svg"; 
+
 
 const skillGroups = [
   {
@@ -47,7 +52,7 @@ const skillGroups = [
       {
         imgSrc: javascript,
         label: "JavaScript",
-        desc: "Interaction",
+        desc: "Programming Language",
       },
       {
         imgSrc: html,
@@ -57,7 +62,7 @@ const skillGroups = [
       {
         imgSrc: css,
         label: "CSS",
-        desc: "User Interface",
+        desc: "Style Sheet Language"
       },
       {
         imgSrc: mips, 
@@ -82,7 +87,7 @@ const skillGroups = [
       {
         imgSrc: nodejs,
         label: "NodeJS",
-        desc: "Web Server",
+        desc: "JavaScript Runtime"
       },
       {
         imgSrc: expressjs,
@@ -92,7 +97,7 @@ const skillGroups = [
       {
         imgSrc: tailwindcss,
         label: "TailwindCSS",
-        desc: "UI Framework",
+        desc: "CSS Framework",
       },
       {
         imgSrc: bootstrap,
@@ -109,6 +114,11 @@ const skillGroups = [
       label: "TensorFlow",
       desc: "Deep Learning Framework",
       },
+      { 
+      imgSrc: springboot, 
+      label: "Spring Boot", 
+      desc: "Java Framework"
+      }
     ],
   },
   {
@@ -124,6 +134,26 @@ const skillGroups = [
         label: "MySQL",
         desc: "Relational Database",
       },
+    ],
+  },
+  {
+    category: "Tools & Technologies",
+    items: [
+      { 
+        imgSrc: postman, 
+        label: "Postman", 
+        desc: "API Testing Tool" 
+      },
+      { 
+        imgSrc: restapi, 
+        label: "REST API", 
+        desc: "Web Service Architecture" 
+      },
+      { 
+        imgSrc: ml, 
+        label: "Machine Learning", 
+        desc: "Data-driven Model Building" 
+      }, 
     ],
   },
   {
