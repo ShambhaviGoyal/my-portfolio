@@ -4,39 +4,15 @@ import PropTypes from "prop-types";
 const Navbar = ({ navOpen }) => {
   const lastActiveLink = useRef();
   const activeBox = useRef();
+  const isClickScrolling = useRef(false);
 
   const navItems = [
-    {
-      label: 'Home',
-      link: '#home',
-      className: 'nav-link',
-      ref: lastActiveLink
-    },
-    {
-      label: 'Skills',
-      link: '#skills',
-      className: 'nav-link'
-    },
-    {
-      label: 'Education',
-      link: '#education',
-      className: 'nav-link'
-    },
-    {
-      label: 'Projects',
-      link: '#projects',
-      className: 'nav-link'
-    },
-    {
-      label: 'Experience',
-      link: '#experience',
-      className: 'nav-link'
-    },
-    {
-      label: 'Contact',
-      link: '#contact',
-      className: 'nav-link md:hidden'
-    }
+    { label: 'Home', link: '#home', className: 'nav-link' },
+    { label: 'Skills', link: '#skills', className: 'nav-link' },
+    { label: 'Education', link: '#education', className: 'nav-link' },
+    { label: 'Projects', link: '#projects', className: 'nav-link' },
+    { label: 'Experience', link: '#experience', className: 'nav-link' },
+    { label: 'Contact', link: '#contact', className: 'nav-link md:hidden' }
   ];
 
   const initActiveBox = () => {
@@ -50,8 +26,9 @@ const Navbar = ({ navOpen }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      let currentSection = null;
+      if (isClickScrolling.current) return;  // Ignore scroll updates during programmatic scroll
 
+      let currentSection = null;
       navItems.forEach(({ link }) => {
         const section = document.querySelector(link);
         if (section) {
@@ -91,17 +68,32 @@ const Navbar = ({ navOpen }) => {
   useEffect(initActiveBox, []);
 
   const activeCurrentLink = (event) => {
+    event.preventDefault();
+
+    const targetHref = event.target.getAttribute('href');
+    const targetSection = document.querySelector(targetHref);
+
+    // Immediately update active link highlight
     lastActiveLink.current?.classList.remove('active');
     event.target.classList.add('active');
     lastActiveLink.current = event.target;
     initActiveBox();
+
+    // Start smooth scroll & disable scroll handler temporarily
+    isClickScrolling.current = true;
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+    // After animation delay, re-enable scroll handler
+    setTimeout(() => {
+      isClickScrolling.current = false;
+    }, 600); // Adjust 600ms based on scroll length/speed if needed
   };
 
   return (
     <nav className={'navbar' + (navOpen ? ' active' : '')}>
       {
-        navItems.map(({ label, link, className, ref }, key) => (
-          <a href={link} key={key} className={className} ref={ref} onClick={activeCurrentLink}>
+        navItems.map(({ label, link, className }, key) => (
+          <a href={link} key={key} className={className} onClick={activeCurrentLink}>
             {label}
           </a>
         ))
