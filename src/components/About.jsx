@@ -15,13 +15,16 @@ const About = () => {
     return (
         <section id="about" className="section">
 
-        <div className="container">
-            <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-                <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                Welcome! I&apos;m Shambhavi, a passionate full stack developer who brings ideas to life through clean code and thoughtful design. From building intuitive user interfaces to developing powerful backend systems, I specialize in creating end-to-end web solutions that are scalable, secure, and beautifully crafted. Let’s turn your vision into a seamless digital experience.
-                </p>
+        <div className="container max-w-xl mx-auto">
 
-                <div className="flex flex-wrap items-center gap-4 md:gap-7">
+       <div className="bg-zinc-800/50 p-4 rounded-2xl md:p-4 reveal-up">               
+                <p className="text-zinc-400 mb-2 md:mb-4 md:text-base max-w-[100ch]">
+                Hi! I'm Shambhavi Goyal, a Computer Science student skilled in Python, Java, C, and JavaScript. I enjoy building full-stack applications using tools like React, Node.js, and Tailwind CSS. My curiosity has also led me to explore machine learning and low-level languages, giving me a deeper understanding of how things work behind the scenes.</p>
+                <p className="text-zinc-400 mb-2 md:mb-4 md:text-base max-w-[100ch]">
+                I've worked as a TA, Math Tutor, and Resident Assistant, experiences that have strengthened my leadership, communication, and problem-solving skills. I thrive in collaborative environments, love learning new tools, and aim to make a meaningful impact wherever I go, whether it’s in code, classrooms, or communities.
+                </p>
+                
+                {/* <div className="flex flex-wrap items-center gap-4 md:gap-7">
                     {
                         aboutItems.map(({label, number}, key) => (
                             <div key={key}>
@@ -37,7 +40,7 @@ const About = () => {
 
                     <img src={logo} alt="logo" width={30} height={30} className="ml-auto md:w-[40px] md:h-[40px]" />
 
-                </div>
+                </div> */}
             </div>
         </div>
         </section>
