@@ -23,7 +23,10 @@ import springboot from "../images/springboot.svg";
 import postman from "../images/postman.svg"; 
 import restapi from "../images/restapi.svg" ; 
 import ml from "../images/machine-learning.svg"; 
-
+import gitLogo from "../images/gitLogo.svg";
+import npm from "../images/npm.svg"; 
+import vscode from "../images/vscode.svg"; 
+import intellij from "../images/intellij-idea.svg"; 
 
 const skillGroups = [
   {
@@ -140,10 +143,31 @@ const skillGroups = [
     category: "Tools & Technologies",
     items: [
       { 
+        imgSrc: gitLogo, 
+        label: "Git", 
+        desc: "Version Control" 
+      },
+      { 
+        imgSrc: npm, 
+        label: "npm", 
+        desc: "Package Manager" 
+      },
+      { 
         imgSrc: postman, 
         label: "Postman", 
         desc: "API Testing Tool" 
       },
+      { 
+        imgSrc: vscode, 
+        label: "VS Code", 
+        desc: "IDE" 
+      },
+      { 
+        imgSrc: intellij, 
+        label: "IntelliJ IDEA", 
+        desc: "IDE" 
+      },
+      
       { 
         imgSrc: restapi, 
         label: "REST API", 
@@ -184,22 +208,31 @@ const Skill = () => {
           exceptional, high-performing websites & applications.
         </p>
 
-        {skillGroups.map(({ category, items }, groupIndex) => (
-          <div key={groupIndex} className="mb-10">
-            <h3 className="text-lg font-semibold text-zinc-300 mb-4">{category}</h3>
-            <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
-              {items.map(({ imgSrc, label, desc }, itemIndex) => (
-                <SkillCard
-                  key={`${groupIndex}-${itemIndex}`}
-                  imgSrc={imgSrc}
-                  label={label}
-                  desc={desc}
-                  classes="reveal-up"
-                />
-              ))}
+        {skillGroups.map(({ category, items }, groupIndex) => {
+          // Check if this is the Tools & Technologies group
+          const isToolsTech = category === "Tools & Technologies";
+
+          return (
+            <div
+              key={groupIndex}
+              className={`${isToolsTech ? "mb-6" : "mb-10"} last:mb-0`}
+            >
+              <h3 className="text-lg font-semibold text-zinc-300 mb-4">{category}</h3>
+              <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
+                {items.map(({ imgSrc, label, desc }, itemIndex) => (
+                  <SkillCard
+                    key={`${groupIndex}-${itemIndex}`}
+                    imgSrc={imgSrc}
+                    label={label}
+                    desc={desc}
+                    classes="reveal-up"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
+
       </div>
     </section>
   );
