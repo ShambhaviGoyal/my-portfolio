@@ -8,8 +8,8 @@ const educationGroups = [
       {
         degree: "Bachelor of Science in Computer Science",
         institution: "University at Buffalo",
-        graduating: "2023-2027",
-        GPA: "3.9",
+        graduating: "May 2027",
+        GPA: "3.8/4.0",
         logo: ublogo
       },
     ],
@@ -20,9 +20,13 @@ const educationGroups = [
       { course: "Systems Programming" },
       { course: "Computer Architecture" },
       { course: "Data Structures" },
-      { course: "Algorithms" },
+      { course: "Algorithms and Complexity" },
       { course: "Object Oriented Programming" },      
-      { course: "Python Programming" }
+      { course: "Python Programming" }, 
+      { course: "Operating Systems" },
+      { course: "Programming Languages" },
+      { course: "Linear Algebra" },
+      { course: "Discrete Mathematics" } 
     ],
   },
 ];
