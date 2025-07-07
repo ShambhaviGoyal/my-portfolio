@@ -2,6 +2,13 @@ import ExperienceCard from "./ExperienceCard";
 
 const experienceGroups = [
   {
+  title: "Student Assistant – Collection Maintenance Projects",
+  company: "University Libraries, University at Buffalo",
+  duration: "Apr 2025 – Present",
+  location: "Buffalo, New York, United States",
+  description: "Maintained and organized large volumes of library materials using the Library of Congress classification system and handheld scanners. Ensured accuracy in inventory data through systematic shelving and digital tracking. Demonstrated strong attention to detail, independence, and reliability in a fast-paced, physically active environment."
+  },
+  {
     title: "CSE 191 Teaching Assistant",
     company: "University at Buffalo",
     duration: "Jan 2025 – Present",
@@ -13,7 +20,7 @@ const experienceGroups = [
     company: "Thomas J. Edwards Undergraduate Learning Center",
     duration: "Sep 2024 – Present",
     location: "Buffalo, New York, United States",
-    description: "Provided support and tutoring to 100+ students in Advanced Calculus, Linear Algebra, and Business Math courses. Helped students understand math concepts, fostering strong fundamentals and promoting independent learning."
+    description: "Tutored over 100 students in Advanced Calculus, Linear Algebra, and Business Math, resulting in an average grade improvement of 10–15% based on follow-up assessments and student reports. By adapting my instruction to suit diverse learning styles and guiding students through targeted problem-solving strategies, I consistently received positive feedback, with 90% of students reporting increased confidence and clarity in understanding mathematical concepts."
   },
   {
     title: "Resident Advisor",

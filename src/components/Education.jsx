@@ -17,16 +17,15 @@ const educationGroups = [
   {
     category: "Relevant Coursework",
     items: [
+      { course: "Operating Systems" },
       { course: "Systems Programming" },
+      { course: "Computer Systems Administration" },
       { course: "Computer Architecture" },
       { course: "Data Structures" },
       { course: "Algorithms and Complexity" },
-      { course: "Object Oriented Programming" },      
-      { course: "Python Programming" }, 
-      { course: "Operating Systems" },
-      { course: "Programming Languages" },
+      { course: "Object Oriented Programming" },   
       { course: "Linear Algebra" },
-      { course: "Discrete Mathematics" } 
+      { course: "Programming Languages" },
     ],
   },
 ];

@@ -5,6 +5,8 @@ import java from "../images/java.svg";
 import python from "../images/python.svg";
 import javascript from "../images/javascript.svg"; 
 import html from "../images/html.svg";
+import kotlin from "../images/Kotlin.svg";
+import androidStudio from "../images/AndroidStudio.svg";
 import css from "../images/css.svg"; 
 import mips from  "../images/mips.svg";
 import vhdl from  "../images/vhdl.svg";
@@ -19,7 +21,8 @@ import linux from "../images/linux.svg";
 import windows from  "../images/windows.svg";
 import vite from "../images/vite.svg"; 
 import tensorflow from "../images/tensorflow.svg";
-import springboot from "../images/springboot.svg"; 
+import flask from "../images/Flask.svg"; 
+import django from "../images/Django.svg";
 import postman from "../images/postman.svg"; 
 import restapi from "../images/restapi.svg" ; 
 import ml from "../images/machine-learning.svg"; 
@@ -30,7 +33,7 @@ import intellij from "../images/intellij-idea.svg";
 
 const skillGroups = [
   {
-    category: "Programming Languages",
+    category: "Languages",
     items: [
       {
         imgSrc: c,
@@ -88,18 +91,13 @@ const skillGroups = [
         desc: "JavaScript Library",
       },
       {
-        imgSrc: nodejs,
-        label: "NodeJS",
-        desc: "JavaScript Runtime"
-      },
-      {
         imgSrc: expressjs,
-        label: "ExpressJS",
+        label: "Express.js",
         desc: "Node Framework",
       },
       {
         imgSrc: tailwindcss,
-        label: "TailwindCSS",
+        label: "Tailwind CSS",
         desc: "CSS Framework",
       },
       {
@@ -108,19 +106,19 @@ const skillGroups = [
         desc: "CSS Framework",
       },
       {
-        imgSrc: vite, 
-        label: "Vite",
-        desc: "Build Tool / Development Server",
-      },
-      {
       imgSrc: tensorflow,
       label: "TensorFlow",
       desc: "Deep Learning Framework",
       },
       { 
-      imgSrc: springboot, 
-      label: "Spring Boot", 
-      desc: "Java Framework"
+      imgSrc: flask, 
+      label: "Flask", 
+      desc: "Python Framework"
+      }, 
+      { 
+      imgSrc: django, 
+      label: "Django", 
+      desc: "Python Framework"
       }
     ],
   },
@@ -152,6 +150,11 @@ const skillGroups = [
         label: "npm", 
         desc: "Package Manager" 
       },
+      {
+        imgSrc: vite, 
+        label: "Vite",
+        desc: "Build Tool / Development Server",
+      },
       { 
         imgSrc: postman, 
         label: "Postman", 
@@ -172,16 +175,11 @@ const skillGroups = [
         imgSrc: restapi, 
         label: "REST API", 
         desc: "Web Service Architecture" 
-      },
-      { 
-        imgSrc: ml, 
-        label: "Machine Learning", 
-        desc: "Data-driven Model Building" 
-      }, 
+      }
     ],
   },
   {
-    category: "Operating Systems",
+    category: "Runtime & OS",
     items: [
       {
         imgSrc: linux,
@@ -192,6 +190,26 @@ const skillGroups = [
         imgSrc: windows,
         label: "Windows",
         desc: "Operating System",
+      },
+      {
+        imgSrc: nodejs,
+        label: "Node.js",
+        desc: "JavaScript Runtime"
+      },
+    ],
+  },
+  {
+    category: "Mobile Development",
+    items: [
+      {
+        imgSrc: kotlin,
+        label: "Kotlin",
+        desc: "Programming Language",
+      },
+      {
+        imgSrc: androidStudio,
+        label: "Android Studio",
+        desc: "IDE",
       },
     ],
   },

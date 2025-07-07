@@ -3,7 +3,7 @@ import quizlogo from '../images/project-quiz.jpg';
 import gameOfLifeLogo from '../images/project-gameOfLife.jpg'; 
 import recipeWebsite from '../images/project-recipe.jpg'; 
 import taskManager from '../images/task-manager.jpg'; 
-
+import ChatApplication from "../images/chat-app.jpg"
 
 const projects = [
     {
@@ -34,10 +34,17 @@ const projects = [
       title: 'Task Manager App',
       desc: 'A full-stack Task Manager app that lets users create, update, delete, and mark tasks as completed. It offers data persistence with MongoDB. Users can manage tasks easily with features like adding descriptions and marking completion.', 
       tags: ['JS', 'HTML', 'CSS', 'MongoDB', 'REST API'],
-      githubLink: 'https://github.com/ShambhaviGoyal/task-manager'
+      githubLink: 'https://github.com/ShambhaviGoyal/task-manager',
+      projectLink: 'https://i.imgur.com/QGAPprG.mp4'
     },
-
-    
+    {
+      imgSrc: ChatApplication,
+      title: 'Live Chat Room',
+      desc: 'A real-time chat app featuring multiple themed rooms, secure user authentication, private messaging, emoji reactions, and typing indicators. It supports light and dark themes and stores chat history with SQLite. This project showcases my skills in full-stack development, real-time communication, and building secure, user-friendly web applications.', 
+      tags: ['Python', 'Flask', 'Socket.IO', 'SQLite'],
+      githubLink: 'https://github.com/ShambhaviGoyal/Chat-Application',
+      projectLink: 'https://i.imgur.com/YUUgBOi.mp4'
+    },
 ];
 
 
