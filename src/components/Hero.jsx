@@ -60,13 +60,13 @@ const Hero = () => {
             <div className="w-full mt-10">
   <div className="bg-zinc-800/50 p-6 rounded-2xl max-w-6xl mx-auto">
     <p className="text-zinc-400 mb-4">
-      I'm a Computer Science student skilled in Python, Java, C, and JavaScript. I enjoy building full-stack applications using tools like React, Node.js, and Tailwind CSS. My curiosity has also led me to explore machine learning and low-level languages, giving me a deeper understanding of how things work behind the scenes.
+    I’m a Computer Science student with experience in Python, Java, C, and JavaScript, and I enjoy building full-stack applications using frameworks like React, Node.js, and Tailwind CSS. Most recently, I worked as a Software Engineer Intern at Meta Layer Initiative, where I developed a decentralized social platform with a Chrome browser extension powered by AI, building features like real-time messaging with WebSockets, secure OAuth authentication, and AI-driven contextual web analysis.
     </p>
     <p className="text-zinc-400 mb-4">
-      I've worked as a TA, Math Tutor, and Resident Assistant, experiences that have strengthened my leadership, communication, and problem-solving skills. I thrive in collaborative environments, love learning new tools, and aim to make a meaningful impact wherever I go, whether it’s in code, classrooms, or communities.
+      Beyond coding, I’ve gained strong leadership, communication, and problem-solving skills through roles as a Teaching Assistant, Math Tutor, and Resident Advisor. I thrive in collaborative environments, enjoy learning new tools, and aim to make a meaningful impact—whether through engineering projects, teaching, or community-building.
     </p>
     <p className="text-zinc-400 mb-4">
-       Outside of coding, I enjoy brainstorming new project ideas, exploring design tools, and learning through hands-on building.I'm currently seeking internship opportunities where I can grow as a developer, collaborate with great teams, and contribute to impactful projects.
+       Outside of work, I like brainstorming new project ideas, experimenting with design tools, and learning through hands-on building. I’m currently seeking software engineering internships where I can grow as a developer, contribute to impactful projects, and collaborate with innovative teams.
     </p>
   </div>
 </div>

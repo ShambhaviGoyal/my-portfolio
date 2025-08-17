@@ -9,7 +9,7 @@ const educationGroups = [
         degree: "Bachelor of Science in Computer Science",
         institution: "University at Buffalo",
         graduating: "May 2027",
-        GPA: "3.8/4.0",
+        GPA: "3.85/4.0",
         logo: ublogo
       },
     ],
@@ -25,7 +25,9 @@ const educationGroups = [
       { course: "Algorithms and Complexity" },
       { course: "Object Oriented Programming" },   
       { course: "Linear Algebra" },
+      { course: "Probability" },
       { course: "Programming Languages" },
+
     ],
   },
 ];

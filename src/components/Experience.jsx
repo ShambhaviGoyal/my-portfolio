@@ -1,24 +1,42 @@
 import ExperienceCard from "./ExperienceCard";
 
 const experienceGroups = [
+
+
+   {
+    title: "Software Developer Intern",
+    company: "Meta Layer Initiative",
+    duration: "Aug 2025 – Present",
+    location: "Berkeley, CA",
+    description: "Developed a decentralized social platform with a Chrome browser extension powered by AI, building a full-stack application using Node.js/Express, PostgreSQL, and React. Leveraged Chrome Extension APIs to enable human–agent interaction, community-aware policies, and presence tracking. Integrated DeepSeek AI for contextual web analysis, implementing real-time messaging with WebSockets, securing authentication with multiple OAuth providers, and delivering a responsive glassmorphism UI optimized for scalability and security." 
+
+  },
+
+  {
+  title: "Undergraduate Teaching Assistant - Algorithms & Complexity",
+  company: "Computer Science and Engineering - University at Buffalo",
+  duration: "Aug 2025 – Present",
+  location: "Buffalo, New York, United States",
+  description: "Supported instruction for 60+ students on core algorithm design paradigms—including greedy, divide-and-conquer, and dynamic programming—as well as advanced topics such as randomized algorithms, distributed systems, and machine learning foundations. Reinforced learning through weekly recitations, 15+ office hours, and detailed feedback on programming assignments and proofs, helping students strengthen both theoretical understanding and practical algorithm implementation."
+  },
   {
   title: "Student Assistant – Collection Maintenance Projects",
   company: "University Libraries, University at Buffalo",
-  duration: "Apr 2025 – Present",
+  duration: "Apr 2025 – July 2025",
   location: "Buffalo, New York, United States",
   description: "Maintained and organized large volumes of library materials using the Library of Congress classification system and handheld scanners. Ensured accuracy in inventory data through systematic shelving and digital tracking. Demonstrated strong attention to detail, independence, and reliability in a fast-paced, physically active environment."
   },
   {
-    title: "CSE 191 Teaching Assistant",
-    company: "University at Buffalo",
-    duration: "Jan 2025 – Present",
+    title: "Undergraduate Teaching Assistant - Discrete Structures",
+    company: "Computer Science and Engineering - University at Buffalo",
+    duration: "Jan 2025 – May 2025",
     location: "Buffalo, New York, United States",
-    description: "Assisted with course material delivery and provided academic support through 20+ office hours, helping students understand complex topics in discrete mathematics. Graded assignments and exams, providing detailed feedback to enhance student comprehension and performance."
+    description: "Assisted in delivering foundational discrete mathematics material to 50+ students, covering logic, proofs, sets, functions, relations, recursion, recurrence relations, induction, graphs, trees, and counting theory. Held 20+ office hours to clarify complex concepts, provide academic support, and guide problem-solving. Graded assignments and exams, offering detailed feedback that improved student understanding and performance."
   },
   {
-    title: "Math Place Tutor",
+    title: "Mathematics Tutor",
     company: "Thomas J. Edwards Undergraduate Learning Center",
-    duration: "Sep 2024 – Present",
+    duration: "Sep 2024 – May 2025",
     location: "Buffalo, New York, United States",
     description: "Tutored over 100 students in Advanced Calculus, Linear Algebra, and Business Math, resulting in an average grade improvement of 10–15% based on follow-up assessments and student reports. By adapting my instruction to suit diverse learning styles and guiding students through targeted problem-solving strategies, I consistently received positive feedback, with 90% of students reporting increased confidence and clarity in understanding mathematical concepts."
   },
@@ -27,14 +45,14 @@ const experienceGroups = [
     company: "University at Buffalo Campus Living",
     duration: "Aug 2024 – Present",
     location: "Buffalo, New York, United States",
-    description: "Guided and supported 30 Honors College students with tailored academic, personal, and career advice, contributing to their overall success. Partnered with fellow RAs and campus living staff to create and implement community-building events, activities, and educational programs."
+    description: "Guided and supported 60+ Honors College students with tailored academic, personal, and career advice, contributing to their overall success. Partnered with fellow RAs and campus living staff to create and implement community-building events, activities, and educational programs."
   },
   {
-    title: "CSE 199 Teaching Assistant",
-    company: "University at Buffalo",
+    title: "Undergraduate Teaching Assistant - Computer Science Seminar",
+    company: "Computer Science and Engineering - University at Buffalo",
     duration: "Aug 2024 – Dec 2024",
     location: "Buffalo, New York, United States",
-    description: "Conducted weekly recitations covering modules of misinformation, digital data representation, data mining, computing ethics, internet infrastructure, and privacy. Assisted in grading assignments to uphold academic standards and provide constructive feedback. "
+    description: "Conducted weekly recitations covering modules on misinformation, digital data representation, data mining, computing ethics, internet infrastructure, and privacy. Assisted in grading assignments for 50+ students, providing constructive feedback to uphold academic standards and support student learning."
   },
   {
     title: "Orientation Operations Assistant",
