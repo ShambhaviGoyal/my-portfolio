@@ -8,8 +8,7 @@ const experienceGroups = [
     company: "Meta Layer Initiative",
     duration: "Aug 2025 – Present",
     location: "Berkeley, CA",
-    description: "Developed a decentralized social platform with a Chrome browser extension powered by AI, building a full-stack application using Node.js/Express, PostgreSQL, and React. Leveraged Chrome Extension APIs to enable human–agent interaction, community-aware policies, and presence tracking. Integrated DeepSeek AI for contextual web analysis, implementing real-time messaging with WebSockets, securing authentication with multiple OAuth providers, and delivering a responsive glassmorphism UI optimized for scalability and security." 
-
+    description: "Developed a decentralized social platform with a Chrome browser extension powered by AI, building a full-stack application using Node.js/Express, PostgreSQL, and React. Leveraged Chrome Extension APIs to enable human–agent interaction, community-aware policies, and presence tracking. Integrated DeepSeek AI for contextual web analysis, implementing real-time messaging with WebSockets, securing authentication with multiple OAuth providers, and delivering a responsive glassmorphism UI optimized for scalability and security."
   },
 
   {
