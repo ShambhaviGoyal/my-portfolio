@@ -9,7 +9,7 @@ const educationGroups = [
         degree: "Bachelor of Science in Computer Science",
         institution: "University at Buffalo",
         graduating: "May 2027",
-        GPA: "3.85/4.0",
+        GPA: "3.87/4.0",
         logo: ublogo
       },
     ],

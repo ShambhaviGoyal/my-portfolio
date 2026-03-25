@@ -8,10 +8,18 @@ import stockdashboard from "../images/stockdashboard.jpg"
 import cineverse from "../images/cineverse.jpg"
 import breastcancermodel from "../images/breastcancermodel.jpg"
 import syllabusCalendarLogo from "../images/syllabusCalendarLogo.jpg"
+import crowdSenseLogo from "../images/crowdSenseLogo.jpg"
 
 
 const projects = [
-
+      {
+        imgSrc: crowdSenseLogo,
+        title: 'CrowdSense',
+        desc: 'A real-time mobile app that helps students instantly check how crowded different campus locations are. Using the Ultralytics YOLO model, it processes live CCTV feeds to detect occupancy across various spots on-campus. A FastAPI backend streams lightweight occupancy data over WebSockets, and the React Native app displays live crowd levels with interactive maps and dynamic cards. This project showcases real-time ML pipelines, server–client communication, and a smooth, student-friendly mobile experience.',
+        tags: ['YOLO', 'Ultralytics', 'FastAPI', 'WebSockets', 'React Native', 'Expo', 'Machine Learning'],
+        githubLink: 'https://github.com/HP-002/crowdsense.git',   // add yours
+        projectLink: 'https://devpost.com/software/crowdsense-q9ariu'             // add demo link if any
+      },
       {
       imgSrc: syllabusCalendarLogo,
       title: 'Syllabus -> Calendar',

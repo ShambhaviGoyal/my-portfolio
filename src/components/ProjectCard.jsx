@@ -24,7 +24,7 @@ const ProjectCard = ({
       <h3 className="title-1 mb-3">{title}</h3>
 
       {/* Added flex-grow here */}
-      <p className="text-zinc-400 text-sm mb-4 flex-grow">{desc}</p> 
+      <p className="text-zinc-400 text-sm mb-4 flex-grow text-justify">{desc}</p> 
 
       <div className="flex flex-wrap items-center gap-2 mb-4">
         {tags.map((label, key) => (

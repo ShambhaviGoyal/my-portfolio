@@ -14,7 +14,7 @@ const experienceGroups = [
   {
   title: "Undergraduate Teaching Assistant - Algorithms & Complexity",
   company: "Computer Science and Engineering - University at Buffalo",
-  duration: "Aug 2025 – Present",
+  duration: "Aug 2025 – Dec 2026",
   location: "Buffalo, New York, United States",
   description: "Supported instruction for 60+ students on core algorithm design paradigms—including greedy, divide-and-conquer, and dynamic programming—as well as advanced topics such as randomized algorithms, distributed systems, and machine learning foundations. Reinforced learning through weekly recitations, 15+ office hours, and detailed feedback on programming assignments and proofs, helping students strengthen both theoretical understanding and practical algorithm implementation."
   },
