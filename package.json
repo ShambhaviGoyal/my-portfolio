@@ -56,5 +56,8 @@
   "bugs": {
     "url": "https://github.com/ShambhaviGoyal/my-portfolio/issues"
   },
-  "homepage": "https://github.com/ShambhaviGoyal/my-portfolio#readme"
+  "homepage": "https://github.com/ShambhaviGoyal/my-portfolio#readme",
+  "overrides": {
+    "minimatch": "^9.0.7"
+  }
 }
