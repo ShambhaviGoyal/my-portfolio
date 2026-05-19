@@ -39,10 +39,10 @@ const Hero = () => {
             University at Buffalo · Computer Science
           </p>
 
-          <h1 className="hero-line mt-6 font-display text-[clamp(2.125rem,6vw,3.75rem)] font-extrabold leading-[1.12] tracking-[-0.04em] text-zinc-900 dark:text-zinc-50">
+          <h1 className="hero-line mt-6 font-display text-[clamp(2.125rem,6vw,3.75rem)] font-extrabold leading-none tracking-[-0.04em] text-zinc-900 dark:text-zinc-50">
             <span className="block">Ship</span>
-            <span className="block py-2">
-              <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-violet-600 bg-clip-text pb-2 pt-0.5 font-extrabold text-transparent [line-height:1.28] [-webkit-background-clip:text] [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
+            <span className="block">
+              <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-violet-600 bg-clip-text font-extrabold text-transparent [-webkit-background-clip:text] [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
                 thoughtful
               </span>
             </span>
