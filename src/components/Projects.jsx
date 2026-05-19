@@ -6,8 +6,16 @@ import circuitLogo from "../images/Circuit.jpg";
 import taskManager from "../images/task-manager.jpg";
 import syllabusCalendarLogo from "../images/syllabusCalendarLogo.jpg";
 import crowdSenseLogo from "../images/CrowdSenseLogo.jpg";
+import drowsinessDetector from "../images/drowsiness-detector.png";
 
 const projects = [
+  {
+    imgSrc: drowsinessDetector,
+    title: "Advanced Driver Assistance System",
+    desc: "An Advanced Driver Assistance System (ADAS) that monitors real-time driver behavior to prevent accidents. Using a custom-trained Convolutional Neural Network (CNN) alongside MediaPipe's 3D facial geometry mapping, it processes live webcam feeds to detect drowsiness, distraction, and yawning. It features dynamic 'Driver Focus Score' analytics and an integrated audio alarm system. This project showcases end-to-end machine learning pipelines, real-time computer vision, and robust safety-critical logic.",
+    tags: ["Python", "TensorFlow", "CNN", "OpenCV", "MediaPipe"],
+    githubLink: "https://github.com/ShambhaviGoyal/drowsiness-detector",
+  },
   {
     imgSrc: crowdSenseLogo,
     title: "CrowdSense",

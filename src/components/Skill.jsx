@@ -326,11 +326,7 @@ const Skill = () => {
             <h2 className="section-heading leading-tight reveal-up">
               Tools I use to go from idea to production.
             </h2>
-            <p className="section-lead mt-4 reveal-up max-w-sm">
-              Wider tool rows scroll automatically; hover a lane to pause and use
-              trackpad or finger to scrub sideways. Short rows stay static unless the
-              window is narrow enough that they overflow.
-            </p>
+
           </div>
 
           <div className="min-w-0 space-y-10">

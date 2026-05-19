@@ -141,7 +141,7 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"
-              placeholder="What are we building?"
+              placeholder="hello!"
               required
               className="text-field min-h-36 max-h-80 resize-y"
             />

@@ -38,10 +38,7 @@ const Education = () => {
           <div className="lg:col-span-4">
             <p className="section-eyebrow reveal-up">Academics</p>
             <h2 className="section-heading reveal-up mt-4">Education</h2>
-            <p className="section-lead mt-5 reveal-up max-w-sm">
-              Systems, theory, and software engineering depth from UB, paired
-              with shipping experience outside the classroom.
-            </p>
+
           </div>
 
           <div className="space-y-8 lg:col-span-8">
