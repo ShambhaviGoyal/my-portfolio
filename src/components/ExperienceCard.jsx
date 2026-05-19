@@ -1,36 +1,48 @@
 import PropTypes from "prop-types";
 
-const ExperienceCard = ({ title, company, duration, location, description, tags = [], index }) => {
-  const borderColor = index % 2 === 0 ? "border-sky-500" : "border-zinc-600";
-  const accentText = "text-sky-300";
-
+const ExperienceCard = ({
+  title,
+  company,
+  duration,
+  location,
+  description,
+  variant = "panel",
+}) => {
+  const embedded = variant === "embedded";
   return (
-    <div className={`relative pl-8 border-l-2 ${borderColor} ml-3`}>
-      <span className="absolute left-[-6px] top-2 w-3 h-3 bg-sky-400 rounded-full"></span>
-      <div className="ring-2 ring-inset ring-zinc-50/10 rounded-2xl p-5 hover:bg-zinc-800 transition-colors duration-200 group mb-6">
-        <h3 className={`text-lg lg:text-xl font-semibold ${accentText}`}>{title}</h3>
-        <p className="text-base text-zinc-100">{company}</p>
-        <p className="text-sm lg:text-base text-zinc-400 italic">{duration}</p>
-        {location && <p className="text-sm lg:text-base text-zinc-400">{location}</p>}
-        {description && (
-          <p className="text-sm lg:text-base text-zinc-200 mt-3 leading-relaxed">
-            {description}
+    <article
+      className={
+        embedded
+          ? "group relative bg-transparent"
+          : "group relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm transition-[border-color,box-shadow] duration-300 hover:border-zinc-300 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-zinc-600"
+      }
+    >
+      <div className={embedded ? "relative py-1 sm:py-0" : "relative p-5 sm:p-6"}>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0 flex-1 space-y-1">
+            <h4 className="type-card-subline">{title}</h4>
+            <p className="type-reading-muted font-semibold">{company}</p>
+          </div>
+
+          <p className="type-support shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 px-3 py-2 text-center font-medium leading-tight text-zinc-700 sm:text-left dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-200">
+            {duration}
+          </p>
+        </div>
+
+        {location && (
+          <p className="type-overline mt-3 flex items-center gap-1.5 normal-case tracking-normal text-zinc-500">
+            <span className="material-symbols-rounded text-[18px] text-zinc-400 dark:text-zinc-500">
+              location_on
+            </span>
+            {location}
           </p>
         )}
-        {tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-4">
-            {tags.map((tag, idx) => (
-              <span
-                key={idx}
-                className="text-xs px-2 py-1 bg-zinc-700 text-zinc-100 rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+
+        {description && (
+          <p className="type-reading-muted mt-4">{description}</p>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -40,8 +52,7 @@ ExperienceCard.propTypes = {
   duration: PropTypes.string.isRequired,
   location: PropTypes.string,
   description: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  index: PropTypes.number.isRequired,
+  variant: PropTypes.oneOf(["panel", "embedded"]),
 };
 
 export default ExperienceCard;

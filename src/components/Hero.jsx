@@ -1,80 +1,115 @@
-import { ButtonPrimary } from "./Button.jsx";
-import smallPFP from '../images/mySmallLogo.jpg';
-import bigPFP from "../images/myProfilePicture.jpeg";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import profilePic from "../images/profile_pic_2.JPG";
 import resume from "../images/resume.pdf";
 
 const Hero = () => {
-    return (
-        <section id="home" className="pt-28 lg:pt-36">
+  const rootRef = useRef(null);
 
-            {/* Grid container for name + photo */}
-            <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
-                {/* Left column */}
-                <div>
-                    <div className="flex items-center gap-3">
-                        <figure className="img-box w-9 h-9 rounded-lg">
-                            <img
-                                src={smallPFP}
-                                width={40}
-                                height={40}
-                                alt="Shambhavi Goyal portrait"
-                                className="img-cover"
-                            />
-                        </figure>
+  useGSAP(
+    () => {
+      const q = gsap.utils.selector(rootRef);
+      gsap
+        .timeline({ defaults: { ease: "power4.out" } })
+        .from(q(".hero-line"), {
+          opacity: 0,
+          y: 48,
+          duration: 0.9,
+          stagger: 0.07,
+        })
+        .from(
+          q(".hero-visual"),
+          { opacity: 0, x: 40, duration: 1, ease: "power3.out" },
+          "-=0.65"
+        );
+    },
+    { scope: rootRef }
+  );
 
-                        <div className="flex items-center gap-1.5 text-zinc-300 text-large tracking-wide">
-                            <span className="relative w-2 h-2 rounded-full bg-emerald-400">
-                                <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
-                            </span>
-                            Looking for Internships
-                        </div>
-                    </div>
+  return (
+    <section
+      id="home"
+      ref={rootRef}
+      className="relative min-h-[100dvh] overflow-x-hidden lg:min-h-screen"
+    >
+      <div className="container-wide flex min-h-[100dvh] flex-col lg:min-h-screen lg:flex-row lg:items-center lg:justify-between lg:gap-x-12 xl:gap-x-16">
+        <div className="relative z-10 flex w-full max-w-2xl flex-col justify-center pt-24 pb-10 sm:pt-28 sm:pb-12 lg:flex-1 lg:max-w-none lg:pb-24 lg:pt-16 xl:py-24">
+          <p className="hero-line section-eyebrow">
+            University at Buffalo · Computer Science
+          </p>
 
-                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-4">
-                        Shambhavi Goyal
-                    </h2>
-                    <h4 className="headline-2 max-w-full mb-3">
-                        CSE @ University at Buffalo
-                    </h4>
-                    <h6 className="lg:text-base text-zinc-400 max-w-full mb-6 font-bold">
-                        A full-stack developer looking for summer internships
-                    </h6>
+          <h1 className="hero-line mt-6 font-display text-[clamp(2.125rem,6vw,3.75rem)] font-extrabold leading-[1.12] tracking-[-0.04em] text-zinc-900 dark:text-zinc-50">
+            <span className="block">Ship</span>
+            <span className="block py-2">
+              <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-violet-600 bg-clip-text pb-2 pt-0.5 font-extrabold text-transparent [line-height:1.28] [-webkit-background-clip:text] [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
+                thoughtful
+              </span>
+            </span>
+            <span className="block text-zinc-500 dark:text-zinc-400">software.</span>
+          </h1>
 
-                    <div className="flex items-center gap-3 mb-8">
-                        <ButtonPrimary label="Download Resume" icon="download" href={resume} target="_blank" />
-                    </div>
-                </div>
+          <p className="hero-line type-hero-bio mt-8">
+            Hi, I&apos;m{" "}
+            <strong className="font-semibold text-zinc-900 dark:text-zinc-100">Shambhavi</strong>.
+            I love building real-time systems, reliable backends, and interfaces
+            that stay fast under load.
+          </p>
 
-                {/* Right column */}
-                <div className="hidden lg:flex flex-col items-start self-start ml-auto">
-                    <figure className="w-[300px] h-[300px] relative rounded-full p-1 bg-gradient-to-br from-sky-400 via-blue-500 to-purple-500">
-                        <img
-                            src={bigPFP}
-                            alt="Shambhavi Goyal"
-                            className="w-full h-full object-cover object-top rounded-full"
-                        />
-                    </figure>
-                </div>
+          <div className="hero-line mt-10 flex flex-wrap items-center gap-4">
+            <a href="#projects" className="btn btn-primary">
+              Browse projects
+              <span className="material-symbols-rounded !pr-0 text-[19px]">
+                south
+              </span>
+            </a>
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              Resume
+            </a>
+          </div>
+
+          <dl className="hero-line mt-14 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-zinc-200/90 bg-white px-4 py-3.5 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/80">
+              <dt className="type-hero-stat-label">Graduating</dt>
+              <dd className="type-hero-stat-value">
+                Dec 2026
+              </dd>
             </div>
+            <div className="rounded-2xl border border-zinc-200/90 bg-white px-4 py-3.5 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/80">
+              <dt className="type-hero-stat-label">Now</dt>
+              <dd className="type-hero-stat-value-text">
+                SWE Intern · Meta Layer Initiative
+              </dd>
+            </div>
+          </dl>
+        </div>
 
-            <div className="w-full mt-10">
-  <div className="bg-zinc-800/50 p-6 rounded-2xl max-w-6xl mx-auto">
-    <p className="text-zinc-400 mb-4">
-    I’m a Computer Science student with experience in Python, Java, C, and JavaScript, and I enjoy building full-stack applications using frameworks like React, Node.js, and Tailwind CSS. Most recently, I worked as a Software Engineer Intern at Meta Layer Initiative, where I developed a decentralized social platform with a Chrome browser extension powered by AI, building features like real-time messaging with WebSockets, secure OAuth authentication, and AI-driven contextual web analysis.
-    </p>
-    <p className="text-zinc-400 mb-4">
-      Beyond coding, I’ve gained strong leadership, communication, and problem-solving skills through roles as a Teaching Assistant, Math Tutor, and Resident Advisor. I thrive in collaborative environments, enjoy learning new tools, and aim to make a meaningful impact—whether through engineering projects, teaching, or community-building.
-    </p>
-    <p className="text-zinc-400 mb-4">
-       Outside of work, I like brainstorming new project ideas, experimenting with design tools, and learning through hands-on building. I’m currently seeking software engineering internships where I can grow as a developer, contribute to impactful projects, and collaborate with innovative teams.
-    </p>
-  </div>
-</div>
-
-
-
-        </section>
-    );
+        <figure className="hero-visual mx-auto mb-14 flex w-full max-w-[min(100%,320px)] shrink-0 flex-col justify-center sm:max-w-[360px] lg:mx-0 lg:mb-0 lg:max-w-[min(100%,340px)] xl:max-w-[380px]">
+          <div className="aspect-square w-full overflow-hidden rounded-[26px] border border-zinc-200/90 bg-zinc-200/40 shadow-[0_20px_50px_-18px_rgba(15,23,42,0.22)] ring-1 ring-black/[0.04] dark:border-zinc-700 dark:bg-zinc-800/50 dark:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.45)] dark:ring-white/[0.06]">
+            <img
+              src={profilePic}
+              alt="Shambhavi Goyal"
+              className="h-full w-full object-cover object-[center_42%]"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </div>
+          <figcaption className="type-figure-caption mt-4">
+            <span className="text-zinc-600 dark:text-zinc-400">Full-stack</span>
+            <span className="mx-2 text-zinc-300 dark:text-zinc-600" aria-hidden>
+              ·
+            </span>
+            <span className="text-sky-600 dark:text-sky-400">Real-time · Web · Systems</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;

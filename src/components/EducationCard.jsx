@@ -20,10 +20,10 @@ const EducationCard = ({ degree, institution, graduating, logo, course, GPA, col
         />
       </figure>
       <div>
-        <h3 className="text-lg font-semibold text-zinc-300">{degree}</h3>
-        <p className="text-base text-zinc-300">{institution}</p>
-        <p className="text-base text-zinc-300">Graduation: {graduating}</p>
-        <p className="text-base text-zinc-300">GPA: {GPA}</p> 
+        <h3 className="text-base font-semibold text-zinc-300">{degree}</h3>
+        <p className="text-sm text-zinc-300">{institution}</p>
+        <p className="text-sm text-zinc-300">Graduation: {graduating}</p>
+        <p className="text-sm text-zinc-300">GPA: {GPA}</p> 
       </div>
     </>
       )}
