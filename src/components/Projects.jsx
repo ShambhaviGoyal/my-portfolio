@@ -1,12 +1,11 @@
 import ProjectCard from "./ProjectCard";
 import pintosLogo from "../images/pintos.png";
-// import quizlogo from "../images/project-quiz.jpg";
 import circuitLogo from "../images/Circuit.jpg";
-// import recipeWebsite from "../images/project-recipe.jpg";
 import taskManager from "../images/task-manager.jpg";
 import syllabusCalendarLogo from "../images/syllabusCalendarLogo.jpg";
 import crowdSenseLogo from "../images/CrowdSenseLogo.jpg";
 import drowsinessDetector from "../images/drowsiness-detector.png";
+import settleUp from "../images/settle-up.jpg";
 
 const projects = [
   {
@@ -15,6 +14,22 @@ const projects = [
     desc: "It monitors real-time driver behavior to prevent accidents. Using a custom-trained Convolutional Neural Network (CNN) alongside MediaPipe's 3D facial geometry mapping, it processes live webcam feeds to detect drowsiness, distraction, and yawning. It features dynamic 'Driver Focus Score' analytics and an integrated audio alarm system. This project showcases end-to-end machine learning pipelines, real-time computer vision, and robust safety-critical logic.",
     tags: ["Python", "TensorFlow", "CNN", "OpenCV", "MediaPipe"],
     githubLink: "https://github.com/ShambhaviGoyal/Driver-Assistance-System.git",
+  },
+  {
+    imgSrc: settleUp,
+    title: "Settle Up",
+    desc: "A full-stack expense-splitting app for roommates, trips, and groups. Built with React Native (Expo) and a Node.js/Express API on PostgreSQL, it supports JWT auth, equal/custom/itemized splits, real-time balance tracking, and simplified settlement suggestions. Receipt photos are parsed with OpenAI Vision for automated expense entry; users can track budgets, recurring bills, group invitations, and pay via digital payment services. GPT-powered spending insights across iOS, Android, and web.",
+    tags: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "OpenAI",
+      "JWT",
+    ],
+    githubLink: "https://github.com/ShambhaviGoyal/settle-up",
   },
   {
     imgSrc: crowdSenseLogo,
@@ -71,22 +86,6 @@ const projects = [
     tags: ["C", "Pintos", "Kernel", "Scheduling", "System calls", "Synchronization"],
     githubLink: "https://github.com/ShambhaviGoyal/Pintos",
   },
-  // {
-  //   imgSrc: recipeWebsite,
-  //   title: "Recipe Website",
-  //   desc: "A simple, responsive recipe app that helps users browse and search for dishes easily. It provides clear instructions and ingredient details for every recipe. Designed for seamless use on both desktop and mobile devices.",
-  //   tags: ["JS", "HTML", "CSS"],
-  //   githubLink: "https://github.com/ShambhaviGoyal/recipeWebsite",
-  //   projectLink: "https://sg-recipewebsite.netlify.app/",
-  // },
-  // {
-  //   imgSrc: quizlogo,
-  //   title: "Quiz Website",
-  //   desc: "A responsive web quiz app where users select a category and number of questions, answer timed questions, and get their score. It features responsive design for smooth use on both desktop and mobile.",
-  //   tags: ["JS", "HTML", "CSS"],
-  //   githubLink: "https://github.com/ShambhaviGoyal/quiz-app",
-  //   projectLink: "https://shambhavigoyal-quizapp.netlify.app/",
-  // },
 ];
 
 const Projects = () => {
@@ -95,7 +94,7 @@ const Projects = () => {
       <div className="container-wide">
         <header className="mb-10 flex max-w-2xl flex-col gap-4 border-b border-zinc-200/90 pb-10 dark:border-zinc-800 lg:max-w-none lg:flex-row lg:items-end lg:justify-between lg:gap-8">
           <div className="max-w-xl">
-            <p className="section-eyebrow mb-3 reveal-up">Work</p>
+            <p className="section-eyebrow mb-3 reveal-up">Projects</p>
             <h2 className="section-heading reveal-up">Projects built end-to-end.</h2>
           </div>
           <p className="section-lead-tight reveal-up lg:max-w-md lg:text-right">
