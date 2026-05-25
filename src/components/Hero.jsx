@@ -2,7 +2,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import profilePic from "../images/profile_pic_2.JPG";
-import resume from "../images/resume.pdf";
 
 const Hero = () => {
   const rootRef = useRef(null);
@@ -62,14 +61,6 @@ const Hero = () => {
               <span className="material-symbols-rounded !pr-0 text-[19px]">
                 south
               </span>
-            </a>
-            <a
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline"
-            >
-              Resume
             </a>
           </div>
 
