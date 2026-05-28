@@ -17,7 +17,7 @@ const SideNav = ({ open, onOpenChange }) => {
     <>
       <aside
         className={
-          "fixed left-0 top-0 z-40 hidden h-screen w-[280px] flex-col border-r border-zinc-200/90 bg-white/95 px-8 py-10 shadow-sm backdrop-blur-2xl transition-transform duration-300 ease-out dark:border-zinc-800 dark:bg-zinc-950/95 lg:flex " +
+          "fixed left-0 top-0 z-40 hidden h-screen w-[240px] flex-col border-r border-zinc-200/90 bg-white/95 px-6 py-8 shadow-sm backdrop-blur-2xl transition-transform duration-300 ease-out dark:border-zinc-800 dark:bg-zinc-950/95 lg:flex " +
           (open ? "translate-x-0" : "-translate-x-full pointer-events-none")
         }
         aria-hidden={!open}

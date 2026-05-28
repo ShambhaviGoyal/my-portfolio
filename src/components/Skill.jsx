@@ -329,10 +329,10 @@ const Skill = () => {
 
           </div>
 
-          <div className="min-w-0 space-y-10">
+          <div className="min-w-0 space-y-5 lg:space-y-6">
             {skillGroups.map(({ category, items }, groupIndex) => (
               <div key={groupIndex} className="reveal-up">
-                <div className="mb-4 flex items-end justify-between gap-4 border-b border-zinc-200/90 pb-3 dark:border-zinc-800">
+                <div className="mb-2 flex items-end justify-between gap-3 border-b border-zinc-200/90 pb-2 dark:border-zinc-800">
                   <h3 className="type-rail-heading">
                     {String(groupIndex + 1).padStart(2, "0")} · {category}
                   </h3>

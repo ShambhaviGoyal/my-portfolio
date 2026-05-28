@@ -80,7 +80,7 @@ const Hero = () => {
           </dl>
         </div>
 
-        <figure className="hero-visual mx-auto mb-14 flex w-full max-w-[min(100%,320px)] shrink-0 flex-col justify-center sm:max-w-[360px] lg:mx-0 lg:mb-0 lg:max-w-[min(100%,340px)] xl:max-w-[380px]">
+        <figure className="hero-visual mx-auto mb-14 flex w-full max-w-[min(100%,280px)] shrink-0 flex-col justify-center sm:max-w-[300px] lg:mx-0 lg:mb-0 lg:max-w-[min(100%,300px)] xl:max-w-[320px]">
           <div className="aspect-square w-full overflow-hidden rounded-[26px] border border-zinc-200/90 bg-zinc-200/40 shadow-[0_20px_50px_-18px_rgba(15,23,42,0.22)] ring-1 ring-black/[0.04] dark:border-zinc-700 dark:bg-zinc-800/50 dark:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.45)] dark:ring-white/[0.06]">
             <img
               src={profilePic}

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 html {
-  font-size: 12.5px;
+  font-size: 13.5px;
   scroll-behavior: smooth;
   scroll-padding-top: 4.75rem;
 }
 
 @media (min-width: 1024px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
     scroll-padding-top: 1.25rem;
   }
 }
