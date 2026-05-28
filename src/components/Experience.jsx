@@ -1,3 +1,5 @@
+import ubLogo from "../images/ublogo.png";
+
 /**
  * Single flat list (no section headers). Order: internship → teaching assistantships →
  * tutoring → other campus roles. Within each band, reverse chronological where it helps.
@@ -14,6 +16,7 @@ const experience = [
   {
     title: "Undergraduate Teaching Assistant - Algorithms & Complexity",
     company: "Computer Science and Engineering - University at Buffalo",
+    imgSrc: ubLogo,
     duration: "Aug 2025 – Dec 2026",
     location: "Buffalo, New York, United States",
     description:
@@ -22,6 +25,7 @@ const experience = [
   {
     title: "Undergraduate Teaching Assistant - Discrete Structures",
     company: "Computer Science and Engineering - University at Buffalo",
+    imgSrc: ubLogo,
     duration: "Jan 2025 – May 2025",
     location: "Buffalo, New York, United States",
     description:
@@ -30,6 +34,7 @@ const experience = [
   {
     title: "Undergraduate Teaching Assistant - Computer Science Seminar",
     company: "Computer Science and Engineering - University at Buffalo",
+    imgSrc: ubLogo,
     duration: "Aug 2024 – Dec 2024",
     location: "Buffalo, New York, United States",
     description:
@@ -38,6 +43,7 @@ const experience = [
   {
     title: "Mathematics Tutor",
     company: "Thomas J. Edwards Undergraduate Learning Center",
+    imgSrc: ubLogo,
     duration: "Sep 2024 – May 2025",
     location: "Buffalo, New York, United States",
     description:
@@ -46,6 +52,7 @@ const experience = [
   {
     title: "Resident Advisor",
     company: "University at Buffalo Campus Living",
+    imgSrc: ubLogo,
     duration: "Aug 2024 – May 2026",
     location: "Buffalo, New York, United States",
     description:
@@ -54,6 +61,7 @@ const experience = [
   {
     title: "Student Assistant – Collection Maintenance Projects",
     company: "University Libraries, University at Buffalo",
+    imgSrc: ubLogo,
     duration: "Apr 2025 – July 2025",
     location: "Buffalo, New York, United States",
     description:
@@ -62,6 +70,7 @@ const experience = [
   {
     title: "Orientation Operations Assistant",
     company: "University at Buffalo",
+    imgSrc: ubLogo,
     duration: "Apr 2024 – Sep 2024",
     location: "Buffalo, New York, United States",
     description:
@@ -78,27 +87,43 @@ function ExperienceRow({ role, isFirst }) {
           : "border-t border-zinc-200 pt-8 dark:border-zinc-800 sm:pt-10"
       }`}
     >
-      <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-        <h3 className="type-card-subline pr-2 leading-snug">{role.title}</h3>
-        <p className="type-support shrink-0 whitespace-nowrap text-zinc-500 dark:text-zinc-400 sm:text-right">
-          {role.duration}
-        </p>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-5">
+        {role.imgSrc ? (
+          <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200/80 bg-white p-1.5 shadow-sm dark:border-zinc-700/80 dark:bg-zinc-800/80">
+            <img src={role.imgSrc} alt="" className="h-full w-full object-contain" />
+          </div>
+        ) : (
+          <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200/80 bg-zinc-50 shadow-sm dark:border-zinc-700/80 dark:bg-zinc-800/50">
+            <span className="font-display text-lg font-bold text-zinc-400 dark:text-zinc-500">
+              {role.company.charAt(0)}
+            </span>
+          </div>
+        )}
+        
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+            <h3 className="type-card-subline pr-2 leading-snug">{role.title}</h3>
+            <p className="type-support shrink-0 whitespace-nowrap text-zinc-500 dark:text-zinc-400 sm:text-right">
+              {role.duration}
+            </p>
+          </div>
+
+          <p className="type-reading-muted mt-1 font-semibold text-zinc-700 dark:text-zinc-300">{role.company}</p>
+
+          {role.location ? (
+            <p className="type-support mt-1 flex items-center gap-1 text-zinc-500 dark:text-zinc-400">
+              <span className="material-symbols-rounded text-[16px] opacity-80" aria-hidden>
+                location_on
+              </span>
+              {role.location}
+            </p>
+          ) : null}
+
+          {role.description ? (
+            <p className="type-reading-muted mt-3 leading-relaxed">{role.description}</p>
+          ) : null}
+        </div>
       </div>
-
-      <p className="type-reading-muted mt-1 font-semibold text-zinc-700 dark:text-zinc-300">{role.company}</p>
-
-      {role.location ? (
-        <p className="type-support mt-1 flex items-center gap-1 text-zinc-500 dark:text-zinc-400">
-          <span className="material-symbols-rounded text-[16px] opacity-80" aria-hidden>
-            location_on
-          </span>
-          {role.location}
-        </p>
-      ) : null}
-
-      {role.description ? (
-        <p className="type-reading-muted mt-3 leading-relaxed">{role.description}</p>
-      ) : null}
     </div>
   );
 }
