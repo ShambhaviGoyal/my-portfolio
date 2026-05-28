@@ -1,4 +1,5 @@
 import ubLogo from "../images/ublogo.png";
+import metalayerLogo from "../images/metalayer.png";
 
 /**
  * Single flat list (no section headers). Order: internship → teaching assistantships →
@@ -8,6 +9,7 @@ const experience = [
   {
     title: "Software Developer Intern",
     company: "Meta Layer Initiative",
+    imgSrc: metalayerLogo,
     duration: "Aug 2025 – May 2026",
     location: "Berkeley, CA, United States",
     description:
