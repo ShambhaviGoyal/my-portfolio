@@ -97,7 +97,7 @@ function ExperienceRow({ role, isFirst }) {
       ) : null}
 
       {role.description ? (
-        <p className="type-reading-muted mt-3 max-w-prose leading-relaxed">{role.description}</p>
+        <p className="type-reading-muted mt-3 leading-relaxed">{role.description}</p>
       ) : null}
     </div>
   );

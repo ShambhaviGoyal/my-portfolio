@@ -61,7 +61,7 @@ const ProjectCard = ({
         {isList ? (
           <>
             <h3 className="type-card-subline">{title}</h3>
-            <p className="type-reading-muted mt-3 max-w-prose">{desc}</p>
+            <p className="type-reading-muted mt-3">{desc}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {tags.map((label, key) => (
                 <span
