@@ -3,18 +3,20 @@
 @tailwind utilities;
 
 html {
+  font-size: 14.5px;
   scroll-behavior: smooth;
   scroll-padding-top: 4.75rem;
 }
 
 @media (min-width: 1024px) {
   html {
+    font-size: 15px;
     scroll-padding-top: 1.25rem;
   }
 }
 
 body {
-  @apply bg-zinc-100 text-[15px] leading-relaxed text-zinc-900 antialiased sm:text-[1rem] dark:bg-zinc-950 dark:text-zinc-100;
+  @apply bg-zinc-100 text-base leading-relaxed text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
   text-rendering: optimizeLegibility;
 }
 
