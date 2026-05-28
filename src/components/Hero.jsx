@@ -32,8 +32,8 @@ const Hero = () => {
       ref={rootRef}
       className="relative min-h-[100dvh] overflow-x-hidden lg:min-h-screen"
     >
-      <div className="container-wide flex min-h-[100dvh] flex-col lg:min-h-screen lg:flex-row lg:items-center lg:justify-between lg:gap-x-12 xl:gap-x-16">
-        <div className="relative z-10 flex w-full max-w-2xl flex-col justify-center pt-24 pb-10 sm:pt-28 sm:pb-12 lg:flex-1 lg:max-w-none lg:pb-24 lg:pt-16 xl:py-24">
+      <div className="container-wide flex min-h-[100dvh] flex-col lg:min-h-screen lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 xl:gap-x-12">
+        <div className="relative z-10 flex w-full max-w-xl flex-col justify-center pt-24 pb-10 sm:pt-28 sm:pb-12 lg:pb-24 lg:pt-16 xl:max-w-2xl xl:py-24">
           <p className="hero-line section-eyebrow">
             University at Buffalo · Computer Science
           </p>
