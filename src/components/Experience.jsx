@@ -1,155 +1,183 @@
+import { useState } from "react";
 import ubLogo from "../images/ublogo.png";
 import metalayerLogo from "../images/metalayer.png";
 
-/**
- * Single flat list (no section headers). Order: internship → teaching assistantships →
- * tutoring → other campus roles. Within each band, reverse chronological where it helps.
- */
-const experience = [
+const internships = [
   {
     title: "Software Developer Intern",
-    company: "Meta Layer Initiative",
+    org: "Meta Layer Initiative",
     imgSrc: metalayerLogo,
-    duration: "Aug 2025 – May 2026",
-    location: "Berkeley, CA, United States",
-    description:
-      "Developed a decentralized social platform with a Chrome browser extension powered by AI, building a full-stack application using Node.js/Express, PostgreSQL, and React. Leveraged Chrome Extension APIs to enable human–agent interaction, community-aware policies, and presence tracking. Integrated DeepSeek AI for contextual web analysis, implementing real-time messaging with WebSockets, securing authentication with multiple OAuth providers, and delivering a responsive glassmorphism UI optimized for scalability and security.",
-  },
-  {
-    title: "Undergraduate Teaching Assistant - Algorithms & Complexity",
-    company: "Computer Science and Engineering - University at Buffalo",
-    imgSrc: ubLogo,
-    duration: "Aug 2025 – Dec 2026",
-    location: "Buffalo, New York, United States",
-    description:
-      "Supported instruction for 60+ students on core algorithm design paradigms, including greedy, divide-and-conquer, and dynamic programming, as well as advanced topics such as randomized algorithms, distributed systems, and machine learning foundations. Reinforced learning through weekly recitations, 15+ office hours, and detailed feedback on programming assignments and proofs, helping students strengthen both theoretical understanding and practical algorithm implementation.",
-  },
-  {
-    title: "Undergraduate Teaching Assistant - Discrete Structures",
-    company: "Computer Science and Engineering - University at Buffalo",
-    imgSrc: ubLogo,
-    duration: "Jan 2025 – May 2025",
-    location: "Buffalo, New York, United States",
-    description:
-      "Assisted in delivering foundational discrete mathematics material to 50+ students, covering logic, proofs, sets, functions, relations, recursion, recurrence relations, induction, graphs, trees, and counting theory. Held 20+ office hours to clarify complex concepts, provide academic support, and guide problem-solving. Graded assignments and exams, offering detailed feedback that improved student understanding and performance.",
-  },
-  {
-    title: "Undergraduate Teaching Assistant - Computer Science Seminar",
-    company: "Computer Science and Engineering - University at Buffalo",
-    imgSrc: ubLogo,
-    duration: "Aug 2024 – Dec 2024",
-    location: "Buffalo, New York, United States",
-    description:
-      "Conducted weekly recitations covering modules on misinformation, digital data representation, data mining, computing ethics, internet infrastructure, and privacy. Assisted in grading assignments for 50+ students, providing constructive feedback to uphold academic standards and support student learning.",
-  },
-  {
-    title: "Mathematics Tutor",
-    company: "Thomas J. Edwards Undergraduate Learning Center",
-    imgSrc: ubLogo,
-    duration: "Sep 2024 – May 2025",
-    location: "Buffalo, New York, United States",
-    description:
-      "Tutored over 100 students in Advanced Calculus, Linear Algebra, and Business Math, resulting in an average grade improvement of 10–15% based on follow-up assessments and student reports. By adapting my instruction to suit diverse learning styles and guiding students through targeted problem-solving strategies, I consistently received positive feedback, with 90% of students reporting increased confidence and clarity in understanding mathematical concepts.",
-  },
-  {
-    title: "Resident Advisor",
-    company: "University at Buffalo Campus Living",
-    imgSrc: ubLogo,
-    duration: "Aug 2024 – May 2026",
-    location: "Buffalo, New York, United States",
-    description:
-      "Guided and supported 60+ Honors College students with tailored academic, personal, and career advice, contributing to their overall success. Partnered with fellow RAs and campus living staff to create and implement community-building events, activities, and educational programs.",
-  },
-  {
-    title: "Student Assistant – Collection Maintenance Projects",
-    company: "University Libraries, University at Buffalo",
-    imgSrc: ubLogo,
-    duration: "Apr 2025 – July 2025",
-    location: "Buffalo, New York, United States",
-    description:
-      "Maintained and organized large volumes of library materials using the Library of Congress classification system and handheld scanners. Ensured accuracy in inventory data through systematic shelving and digital tracking. Demonstrated strong attention to detail, independence, and reliability in a fast-paced, physically active environment.",
-  },
-  {
-    title: "Orientation Operations Assistant",
-    company: "University at Buffalo",
-    imgSrc: ubLogo,
-    duration: "Apr 2024 – Sep 2024",
-    location: "Buffalo, New York, United States",
-    description:
-      "Utilized orientation databases and systems to update attendance records, coordinate UBLinked events, and support behind-the-scenes logistics. Managed logistics for orientation programs, while also coordinating inventory, deliveries, and organized storage of program supplies.",
+    period: "Aug 2025 \u2013 May 2026",
+    location: "Berkeley, CA",
+    bullets: [
+      "Built a decentralized social platform with a Chrome extension powered by DeepSeek AI for contextual web analysis",
+      "Full-stack with Node.js/Express, PostgreSQL, and React; real-time messaging via WebSockets",
+      "Implemented multi-provider OAuth and a responsive glassmorphism UI optimized for scalability",
+    ],
   },
 ];
 
-function ExperienceRow({ role, isFirst }) {
+const teaching = [
+  {
+    title: "UTA \u2014 Algorithms & Complexity",
+    org: "CSE, University at Buffalo",
+    imgSrc: ubLogo,
+    period: "Aug 2025 \u2013 Dec 2026",
+    location: "Buffalo, NY",
+    bullets: [
+      "Supporting 60+ students in greedy, D&C, DP, and randomized algorithm design",
+      "Weekly recitations, 15+ office hours, and feedback on assignments and proofs",
+    ],
+  },
+  {
+    title: "UTA \u2014 Discrete Structures",
+    org: "CSE, University at Buffalo",
+    imgSrc: ubLogo,
+    period: "Jan 2025 \u2013 May 2025",
+    location: "Buffalo, NY",
+    bullets: [
+      "Delivered discrete math material to 50+ students \u2014 logic, proofs, induction, graphs, counting",
+      "Held 20+ office hours for academic support and problem-solving guidance",
+    ],
+  },
+  {
+    title: "UTA \u2014 Computer Science Seminar",
+    org: "CSE, University at Buffalo",
+    imgSrc: ubLogo,
+    period: "Aug 2024 \u2013 Dec 2024",
+    location: "Buffalo, NY",
+    bullets: [
+      "Weekly recitations on misinformation, data mining, computing ethics, and privacy",
+      "Graded assignments for 50+ students with constructive feedback",
+    ],
+  },
+  {
+    title: "Mathematics Tutor",
+    org: "Edwards Undergraduate Learning Center",
+    imgSrc: ubLogo,
+    period: "Sep 2024 \u2013 May 2025",
+    location: "Buffalo, NY",
+    bullets: [
+      "Tutored 100+ students in Calculus, Linear Algebra, and Business Math",
+      "Avg grade improvement of 10\u201315%; 90% reported increased confidence",
+    ],
+  },
+];
+
+const other = [
+  {
+    title: "Resident Advisor",
+    org: "UB Campus Living",
+    imgSrc: ubLogo,
+    period: "Aug 2024 \u2013 May 2026",
+    location: "Buffalo, NY",
+    bullets: [
+      "Guided 60+ Honors College students; organized community-building events",
+    ],
+  },
+  {
+    title: "Student Assistant \u2014 Collection Maintenance",
+    org: "University Libraries, UB",
+    imgSrc: ubLogo,
+    period: "Apr 2025 \u2013 Jul 2025",
+    location: "Buffalo, NY",
+    bullets: [
+      "Organized library materials using Library of Congress classification and digital tracking",
+    ],
+  },
+  {
+    title: "Orientation Operations Assistant",
+    org: "University at Buffalo",
+    imgSrc: ubLogo,
+    period: "Apr 2024 \u2013 Sep 2024",
+    location: "Buffalo, NY",
+    bullets: [
+      "Managed logistics for orientation programs \u2014 attendance, events, inventory",
+    ],
+  },
+];
+
+function RoleCard({ role }) {
   return (
-    <div
-      className={`reveal-up pb-8 last:pb-0 sm:pb-10 sm:last:pb-0 ${
-        isFirst
-          ? ""
-          : "border-t border-zinc-200 pt-8 dark:border-zinc-800 sm:pt-10"
-      }`}
-    >
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-5">
-        {role.imgSrc ? (
-          <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200/80 bg-white p-1.5 shadow-sm dark:border-zinc-700/80 dark:bg-zinc-800/80">
-            <img src={role.imgSrc} alt="" className="h-full w-full object-contain" />
-          </div>
-        ) : (
-          <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200/80 bg-zinc-50 shadow-sm dark:border-zinc-700/80 dark:bg-zinc-800/50">
-            <span className="font-display text-lg font-bold text-zinc-400 dark:text-zinc-500">
-              {role.company.charAt(0)}
-            </span>
-          </div>
-        )}
-        
+    <div className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="flex gap-4">
+        <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface p-1.5 dark:bg-zinc-800">
+          <img src={role.imgSrc} alt="" className="h-full w-full object-contain" />
+        </div>
         <div className="min-w-0 flex-1">
-          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-            <h3 className="type-card-subline pr-2 leading-snug">{role.title}</h3>
-            <p className="type-support shrink-0 whitespace-nowrap text-zinc-500 dark:text-zinc-400 sm:text-right">
-              {role.duration}
-            </p>
+          <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+            <h4 className="text-base font-bold text-navy dark:text-zinc-50">{role.title}</h4>
+            <span className="shrink-0 text-sm text-muted dark:text-zinc-500">{role.period}</span>
           </div>
-
-          <p className="type-reading-muted mt-1 font-semibold text-zinc-700 dark:text-zinc-300">{role.company}</p>
-
-          {role.location ? (
-            <p className="type-support mt-1 flex items-center gap-1 text-zinc-500 dark:text-zinc-400">
-              <span className="material-symbols-rounded text-[16px] opacity-80" aria-hidden>
-                location_on
-              </span>
-              {role.location}
-            </p>
-          ) : null}
-
-          {role.description ? (
-            <p className="type-reading-muted mt-3 leading-relaxed">{role.description}</p>
-          ) : null}
+          <p className="mt-1 text-[14px] text-muted dark:text-zinc-400">
+            {role.org} &middot; {role.location}
+          </p>
+          <ul className="mt-3 space-y-1.5">
+            {role.bullets.map((b, i) => (
+              <li key={i} className="text-[15px] leading-relaxed text-navy/75 dark:text-zinc-400">
+                <span className="mr-2 text-accent">&#8226;</span>{b}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
   );
 }
 
-const Experience = () => {
+function SectionGroup({ title, roles }) {
   return (
-    <section id="experience" className="section border-t border-zinc-200/80 bg-zinc-50/50 dark:border-zinc-800 dark:bg-zinc-950/80">
-      <div className="container-wide">
-        <div className="mb-10 max-w-2xl">
-          <p className="section-eyebrow mb-3 reveal-up">Experience</p>
-          <h2 className="section-heading reveal-up">Roles and impact</h2>
-          <p className="section-lead-tight mt-4 reveal-up">
-            Internships, teaching assistantships, tutoring, and campus roles.
-          </p>
-        </div>
+    <div>
+      <h3 className="mb-5 text-sm font-bold uppercase tracking-widest text-muted/70 dark:text-zinc-500">
+        {title}
+      </h3>
+      <div className="space-y-4">
+        {roles.map((role) => (
+          <RoleCard key={role.title + role.period} role={role} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
-        <div className="mx-auto max-w-3xl rounded-xl border border-zinc-200/90 bg-white px-4 py-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-900 sm:px-8 sm:py-8">
-          {experience.map((role, index) => (
-            <ExperienceRow
-              key={`${role.company}-${role.title}-${index}`}
-              role={role}
-              isFirst={index === 0}
-            />
-          ))}
+const Experience = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  return (
+    <section id="experience" className="section">
+      <div className="container">
+        <h2 className="text-4xl font-bold tracking-tight text-navy dark:text-zinc-50">
+          Experience
+        </h2>
+        <p className="mt-3 max-w-xl text-lg text-muted dark:text-zinc-400">
+          Internships, teaching assistantships, and campus involvement.
+        </p>
+
+        <div className="mt-12 space-y-10">
+          <SectionGroup title="Internships" roles={internships} />
+          <SectionGroup title="Teaching & Tutoring" roles={teaching} />
+
+          <div className="pt-2">
+            <button
+              type="button"
+              onClick={() => setShowMore((v) => !v)}
+              className="flex items-center gap-1.5 text-[15px] font-medium text-muted transition-colors hover:text-navy dark:text-zinc-400 dark:hover:text-zinc-200"
+            >
+              <span
+                className="material-symbols-rounded text-[18px] transition-transform duration-200"
+                style={{ transform: showMore ? "rotate(180deg)" : "rotate(0deg)" }}
+              >
+                expand_more
+              </span>
+              {showMore ? "Hide other roles" : `Other campus roles (${other.length})`}
+            </button>
+
+            {showMore && (
+              <div className="mt-6 animate-fade-in">
+                <SectionGroup title="Campus" roles={other} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

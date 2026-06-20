@@ -1,103 +1,45 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import profilePic from "../images/new_profile_pic.png";
+import HeroVisual from "./HeroVisual";
 
 const Hero = () => {
-  const rootRef = useRef(null);
-
-  useGSAP(
-    () => {
-      const q = gsap.utils.selector(rootRef);
-      gsap
-        .timeline({ defaults: { ease: "power4.out" } })
-        .from(q(".hero-line"), {
-          opacity: 0,
-          y: 48,
-          duration: 0.9,
-          stagger: 0.07,
-        })
-        .from(
-          q(".hero-visual"),
-          { opacity: 0, x: 40, duration: 1, ease: "power3.out" },
-          "-=0.65"
-        );
-    },
-    { scope: rootRef }
-  );
-
   return (
-    <section
-      id="home"
-      ref={rootRef}
-      className="relative min-h-[100dvh] overflow-x-hidden lg:min-h-screen"
-    >
-      <div className="container-wide flex min-h-[100dvh] flex-col lg:min-h-screen lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 xl:gap-x-12">
-        <div className="relative z-10 flex w-full max-w-xl flex-col justify-center pt-24 pb-10 sm:pt-28 sm:pb-12 lg:pb-24 lg:pt-16 xl:max-w-2xl xl:py-24">
-          <p className="hero-line section-eyebrow">
-            University at Buffalo · Computer Science
-          </p>
+    <section id="home" className="flex min-h-screen items-center pt-16">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-20">
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-8 xl:gap-12 animate-fade-in">
+          <div className="w-full flex-1 lg:max-w-[48%]">
+            <p className="text-lg text-muted dark:text-zinc-400">
+              Hi! I&apos;m
+            </p>
 
-          <h1 className="hero-line mt-6 font-display text-[clamp(2.125rem,6vw,3.75rem)] font-extrabold leading-none tracking-[-0.04em] text-zinc-900 dark:text-zinc-50">
-            <span className="block">Ship</span>
-            <span className="block">
-              <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-violet-600 bg-clip-text font-extrabold text-transparent [-webkit-background-clip:text] [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
-                thoughtful
-              </span>
-            </span>
-            <span className="block text-zinc-500 dark:text-zinc-400">software.</span>
-          </h1>
+            <h1 className="mt-2 text-[3.5rem] font-extrabold leading-[1.08] tracking-tight text-navy sm:text-[4.2rem] lg:text-[4.8rem] dark:text-zinc-50">
+              Shambhavi<br />Goyal
+            </h1>
 
-          <p className="hero-line type-hero-bio mt-8">
-            Hi, I&apos;m{" "}
-            <strong className="font-semibold text-zinc-900 dark:text-zinc-100">Shambhavi</strong>.
-            I love building real-time systems, reliable backends, and interfaces
-            that stay fast under load.
-          </p>
+            <p className="mt-6 max-w-xl text-xl leading-[1.7] text-muted dark:text-zinc-400">
+              Building things, breaking things, and learning from both. A
+              collection of projects, ideas, and lessons learned along the way.
+            </p>
 
-          <div className="hero-line mt-10 flex flex-wrap items-center gap-4">
-            <a href="#projects" className="btn btn-primary">
-              Browse projects
-              <span className="material-symbols-rounded !pr-0 text-[19px]">
-                south
-              </span>
-            </a>
+            <div className="mt-8 flex items-center gap-3">
+              <a href="https://github.com/ShambhaviGoyal" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white transition-opacity hover:opacity-80 dark:bg-zinc-200 dark:text-zinc-900">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/shambhavigoyal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0A66C2] text-white transition-opacity hover:opacity-80">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="mailto:shambhavigoyal88@gmail.com" aria-label="Email" className="flex h-11 w-11 items-center justify-center rounded-full bg-accent text-white transition-opacity hover:opacity-80">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+            </div>
+
+            <div className="mt-6">
+              <a href="#projects" className="btn-primary">
+                View Projects
+              </a>
+            </div>
           </div>
 
-          <dl className="hero-line mt-14 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-zinc-200/90 bg-white px-4 py-3.5 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/80">
-              <dt className="type-hero-stat-label">Graduating</dt>
-              <dd className="type-hero-stat-value">
-                Dec 2026
-              </dd>
-            </div>
-            <div className="rounded-2xl border border-zinc-200/90 bg-white px-4 py-3.5 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/80">
-              <dt className="type-hero-stat-label">Now</dt>
-              <dd className="type-hero-stat-value-text">
-                SWE Intern · Meta Layer Initiative
-              </dd>
-            </div>
-          </dl>
+          <HeroVisual />
         </div>
-
-        <figure className="hero-visual mx-auto mb-14 flex w-full max-w-[min(100%,280px)] shrink-0 flex-col justify-center sm:max-w-[300px] lg:mx-0 lg:mb-0 lg:max-w-[min(100%,300px)] xl:max-w-[320px]">
-          <div className="aspect-square w-full overflow-hidden rounded-[26px] border border-zinc-200/90 bg-zinc-200/40 shadow-[0_20px_50px_-18px_rgba(15,23,42,0.22)] ring-1 ring-black/[0.04] dark:border-zinc-700 dark:bg-zinc-800/50 dark:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.45)] dark:ring-white/[0.06]">
-            <img
-              src={profilePic}
-              alt="Shambhavi Goyal"
-              className="h-full w-full object-cover object-[center_42%]"
-              fetchPriority="high"
-              decoding="async"
-            />
-          </div>
-          <figcaption className="type-figure-caption mt-4">
-            <span className="text-zinc-600 dark:text-zinc-400">Full-stack</span>
-            <span className="mx-2 text-zinc-300 dark:text-zinc-600" aria-hidden>
-              ·
-            </span>
-            <span className="text-sky-600 dark:text-sky-400">Real-time · Web · Systems</span>
-          </figcaption>
-        </figure>
       </div>
     </section>
   );
