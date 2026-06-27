@@ -1,9 +1,14 @@
 /** Single-page anchors — ids must match section `id` attributes */
 export const NAV_SECTIONS = [
-  { id: "home", label: "Intro", href: "#home" },
-  { id: "skills", label: "Tools", href: "#skills" },
-  { id: "education", label: "Study", href: "#education" },
+  { id: "home", label: "About", href: "#home" },
+  { id: "skills", label: "Skills", href: "#skills" },
+  { id: "education", label: "Education", href: "#education" },
   { id: "projects", label: "Projects", href: "#projects" },
-  { id: "experience", label: "Roles", href: "#experience" },
+  { id: "experience", label: "Experience", href: "#experience" },
+  {
+    id: "certifications",
+    label: "Certifications",
+    href: "#certifications",
+  },
   { id: "contact", label: "Contact", href: "#contact" },
 ];

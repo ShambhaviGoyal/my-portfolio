@@ -1,10 +1,6 @@
 import ubLogo from "../images/ublogo.png";
 import metalayerLogo from "../images/metalayer.png";
 
-/**
- * Single flat list (no section headers). Order: internship → teaching assistantships →
- * tutoring → other campus roles. Within each band, reverse chronological where it helps.
- */
 const experience = [
   {
     title: "Software Developer Intern",
@@ -80,51 +76,49 @@ const experience = [
   },
 ];
 
-function ExperienceRow({ role, isFirst }) {
+function ExperienceNode({ role }) {
   return (
-    <div
-      className={`reveal-up pb-8 last:pb-0 sm:pb-10 sm:last:pb-0 ${
-        isFirst
-          ? ""
-          : "border-t border-zinc-200 pt-8 dark:border-zinc-800 sm:pt-10"
-      }`}
-    >
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-5">
+    <div className="group relative pb-4 pl-14 reveal-up last:pb-0 sm:pl-[4.25rem]">
+      {/* Timeline node */}
+      <div className="absolute left-0 top-0 z-10 flex h-11 w-11 items-center justify-center rounded-xl border border-theme-border bg-theme-surface transition-colors duration-300 group-hover:border-theme-text/20 dark:border-themeDark-border dark:bg-themeDark-surface dark:group-hover:border-themeDark-text/30 sm:h-12 sm:w-12">
         {role.imgSrc ? (
-          <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200/80 bg-white p-1.5 shadow-sm dark:border-zinc-700/80 dark:bg-zinc-800/80">
-            <img src={role.imgSrc} alt="" className="h-full w-full object-contain" />
-          </div>
+          <img
+            src={role.imgSrc}
+            alt=""
+            className="h-6 w-6 rounded object-contain sm:h-7 sm:w-7"
+          />
         ) : (
-          <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zinc-200/80 bg-zinc-50 shadow-sm dark:border-zinc-700/80 dark:bg-zinc-800/50">
-            <span className="font-display text-lg font-bold text-zinc-400 dark:text-zinc-500">
-              {role.company.charAt(0)}
-            </span>
-          </div>
+          <span className="font-display text-sm font-semibold text-theme-muted dark:text-themeDark-muted">
+            {role.company.charAt(0)}
+          </span>
         )}
-        
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-            <h3 className="type-card-subline pr-2 leading-snug">{role.title}</h3>
-            <p className="type-support shrink-0 whitespace-nowrap text-zinc-500 dark:text-zinc-400 sm:text-right">
-              {role.duration}
-            </p>
-          </div>
+      </div>
 
-          <p className="type-reading-muted mt-1 font-semibold text-zinc-700 dark:text-zinc-300">{role.company}</p>
-
-          {role.location ? (
-            <p className="type-support mt-1 flex items-center gap-1 text-zinc-500 dark:text-zinc-400">
-              <span className="material-symbols-rounded text-[16px] opacity-80" aria-hidden>
-                location_on
-              </span>
-              {role.location}
-            </p>
-          ) : null}
-
-          {role.description ? (
-            <p className="type-reading-muted mt-3 leading-relaxed">{role.description}</p>
-          ) : null}
+      <div>
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+          <h3 className="font-display text-lg font-semibold tracking-tight text-theme-text dark:text-themeDark-text">
+            {role.title}
+          </h3>
+          <span className="shrink-0 whitespace-nowrap font-mono text-xs text-theme-muted dark:text-themeDark-muted">
+            {role.duration}
+          </span>
         </div>
+
+        <p className="mt-1.5 text-sm font-medium text-theme-accent dark:text-themeDark-accent">
+          {role.company}
+        </p>
+
+        {role.location && (
+          <p className="mt-1 text-xs text-theme-muted dark:text-themeDark-muted">
+            {role.location}
+          </p>
+        )}
+
+        {role.description && (
+          <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-theme-muted dark:text-themeDark-muted">
+            {role.description}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -132,24 +126,24 @@ function ExperienceRow({ role, isFirst }) {
 
 const Experience = () => {
   return (
-    <section id="experience" className="section border-t border-zinc-200/80 bg-zinc-50/50 dark:border-zinc-800 dark:bg-zinc-950/80">
+    <section id="experience" className="section">
       <div className="container-wide">
-        <div className="mb-10 max-w-2xl">
-          <p className="section-eyebrow mb-3 reveal-up">Experience</p>
-          <h2 className="section-heading reveal-up">Roles and impact</h2>
-          <p className="section-lead-tight mt-4 reveal-up">
-            Internships, teaching assistantships, tutoring, and campus roles.
-          </p>
-        </div>
+        <header className="section-header">
+          <p className="eyebrow reveal-up mb-2">Experience</p>
+          <h2 className="heading reveal-up">Where I&apos;ve worked.</h2>
+        </header>
 
-        <div className="mx-auto max-w-3xl rounded-xl border border-zinc-200/90 bg-white px-4 py-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-900 sm:px-8 sm:py-8">
-          {experience.map((role, index) => (
-            <ExperienceRow
-              key={`${role.company}-${role.title}-${index}`}
-              role={role}
-              isFirst={index === 0}
-            />
-          ))}
+        <div className="relative">
+          <div className="absolute bottom-2 left-[1.375rem] top-2 w-px bg-theme-border dark:bg-themeDark-border sm:left-6" />
+
+          <div>
+            {experience.map((role, index) => (
+              <ExperienceNode
+                key={`${role.company}-${role.title}-${index}`}
+                role={role}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

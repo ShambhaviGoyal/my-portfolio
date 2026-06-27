@@ -1,84 +1,55 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindScrollbar from 'tailwind-scrollbar';
+import tailwindScrollbar from "tailwind-scrollbar";
 
 export default {
   darkMode: "class",
-  content: [
-    "./index.html", 
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ['"Space Grotesk"', "Inter", "system-ui", "sans-serif"],
+        mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
       },
       letterSpacing: {
-        tighter: '-0.04em',
-        tight: '-0.02em',
+        tighter: "-0.04em",
+        tight: "-0.02em",
       },
       colors: {
-        sky: {
-          300: '#8ab4f8',
-          400: '#4285F4',  // Google blue
-          500: '#1a73e8',
-          600: '#1967d2',
+        // Warm stone monochrome + a single burnt-orange accent.
+        theme: {
+          bg: "#faf9f7", // warm paper
+          surface: "#ffffff",
+          text: "#1c1917", // stone-900
+          muted: "#57534e", // stone-600
+          border: "#e7e5e4", // stone-200
+          accent: "#c2410c", // burnt orange (orange-700)
+          accentHover: "#9a3412", // orange-800
         },
-        emerald: {
-          200: '#34A853',
-          400: '#34A853',
-          500: '#188038',
+        themeDark: {
+          bg: "#0c0a09", // stone-950
+          surface: "#1c1917", // stone-900
+          text: "#fafaf9", // stone-50
+          muted: "#a8a29e", // stone-400
+          border: "#292524", // stone-800
+          accent: "#fb923c", // orange-400
+          accentHover: "#fdba74", // orange-300
         },
-        google: {
-          blue: '#4285F4',
-          red: '#EA4335',
-          yellow: '#FBBC05',
-          green: '#34A853',
-          bg: '#ffffff',
-          surface: '#f8f9fa',
-          surfaceDark: '#202124',
-          text: '#202124',
-          textMuted: '#5f6368',
-        }
       },
       boxShadow: {
-        'google-1': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
-        'google-2': '0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15)',
-        'google-3': '0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15)',
-        'google-4': '0 2px 3px 0 rgba(60,64,67,0.3), 0 6px 10px 4px rgba(60,64,67,0.15)',
-      }
+        soft: "0 1px 2px rgba(28, 25, 23, 0.04), 0 4px 16px -8px rgba(28, 25, 23, 0.12)",
+        lift: "0 12px 40px -16px rgba(28, 25, 23, 0.25)",
+      },
+      keyframes: {
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.4s ease-out both",
+      },
     },
   },
-  plugins: [
-    tailwindScrollbar, 
-    function({ addUtilities }) {
-      addUtilities({
-        '.transition-bg': {
-          'transition-property': 'transform, background-color',
-          'transition-duration': '150ms',
-          'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
-        },
-      });
-
-      addUtilities({
-        '.transition-bg-2': {
-          'transition-property': 'opacity, transform filter',
-          'transition-duration': '150ms',
-          'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
-          },
-      });
-
-      addUtilities({
-        '.transition-bg-3': {
-          'transition-property': 'top, left',
-          'transition-duration': '500',
-          },
-      });
-      addUtilities({
-        '.transition-bg-4': {
-          'transition-property': 'background-color',
-          },
-      });
-    }
-  ]
-}
+  plugins: [tailwindScrollbar],
+};

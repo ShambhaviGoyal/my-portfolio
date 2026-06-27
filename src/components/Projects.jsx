@@ -1,24 +1,26 @@
 import ProjectCard from "./ProjectCard";
+
+// Images kept on each project for a possible future image/detail view.
 import pintosLogo from "../images/pintos.png";
 import circuitLogo from "../images/Circuit.jpg";
 import taskManager from "../images/task-manager.jpg";
 import syllabusCalendarLogo from "../images/syllabusCalendarLogo.jpg";
-import crowdSenseLogo from "../images/CrowdSenseLogo.jpg";
-import drowsinessDetector from "../images/drowsiness-detector.png";
+import crowdSenseLogo from "../images/crowdsense-mockup.png";
+import drowsinessDetector from "../images/driver-assistance.png";
 import settleUp from "../images/settle-up.jpg";
 
 const projects = [
   {
     imgSrc: drowsinessDetector,
     title: "Driver Assistance System",
-    desc: "It monitors real-time driver behavior to prevent accidents. Using a custom-trained Convolutional Neural Network (CNN) alongside MediaPipe's 3D facial geometry mapping, it processes live webcam feeds to detect drowsiness, distraction, and yawning. It features dynamic 'Driver Focus Score' analytics and an integrated audio alarm system. This project showcases end-to-end machine learning pipelines, real-time computer vision, and robust safety-critical logic.",
+    desc: "It monitors real-time driver behavior to prevent accidents. Using a custom-trained Convolutional Neural Network (CNN) alongside MediaPipe's 3D facial geometry mapping, it processes live webcam feeds to detect drowsiness, distraction, and yawning. It features dynamic 'Driver Focus Score' analytics and an integrated audio alarm system.",
     tags: ["Python", "TensorFlow", "CNN", "OpenCV", "MediaPipe"],
     githubLink: "https://github.com/ShambhaviGoyal/Driver-Assistance-System.git",
   },
   {
     imgSrc: settleUp,
     title: "Settle Up",
-    desc: "A full-stack expense-splitting app for roommates, trips, and groups. Built with React Native (Expo) and a Node.js/Express API on PostgreSQL, it supports JWT auth, equal/custom/itemized splits, real-time balance tracking, and simplified settlement suggestions. Receipt photos are parsed with OpenAI Vision for automated expense entry; users can track budgets, recurring bills, group invitations, and pay via digital payment services. GPT-powered spending insights across iOS, Android, and web.",
+    desc: "A full-stack expense-splitting app for roommates, trips, and groups. It supports equal/custom/itemized splits, real-time balance tracking, and simplified settlement suggestions. Receipt photos are parsed with OpenAI Vision for automated expense entry; users can track budgets, recurring bills, and group invitations.",
     tags: [
       "React Native",
       "Expo",
@@ -34,7 +36,7 @@ const projects = [
   {
     imgSrc: crowdSenseLogo,
     title: "CrowdSense",
-    desc: "A real-time mobile app that helps students instantly check how crowded different campus locations are. Using the Ultralytics YOLO model, it processes live CCTV feeds to detect occupancy across various spots on-campus. A FastAPI backend streams lightweight occupancy data over WebSockets, and the React Native app displays live crowd levels with interactive maps and dynamic cards. This project showcases real-time ML pipelines, server-client communication, and a smooth, student-friendly mobile experience.",
+    desc: "A real-time mobile app that helps students instantly check how crowded different campus locations are. Using the Ultralytics YOLO model, it processes live CCTV feeds to detect occupancy across various spots on-campus. A FastAPI backend streams lightweight occupancy data over WebSockets, and the React Native app displays live crowd levels with interactive maps and dynamic cards.",
     tags: [
       "YOLO",
       "Ultralytics",
@@ -49,8 +51,8 @@ const projects = [
   },
   {
     imgSrc: syllabusCalendarLogo,
-    title: "Syllabus -> Calendar",
-    desc: "A full-stack web app that converts school syllabi into interactive calendars using AI. Features intelligent PDF parsing, automated assignment extraction, and Google Calendar integration with OAuth 2.0. Users can upload PDFs, view color-coded events, export to ICS, and sync to Google Calendar. Demonstrates full-stack development, AI integration, and modern web technologies.",
+    title: "Syllabus → Calendar",
+    desc: "A full-stack web app that populates school syllabi into students' personal calendars using AI. Features intelligent PDF parsing, automated assignment extraction, and Google Calendar integration with OAuth 2.0. Users can upload PDFs, view events, export to ICS, and sync to Google Calendar.",
     tags: [
       "Next.js 14",
       "TypeScript",
@@ -65,7 +67,7 @@ const projects = [
   {
     imgSrc: circuitLogo,
     title: "Alice's Game Of Life",
-    desc: "An automaton simulator based on Conway's Game of Life with a unique algorithmic twist. Built using C++ to operate an Arduino UNO R4 microcontroller, it stores and computes cell generations based on custom game logic. A physical circuit, built entirely from NPN transistors, interacts seamlessly with the software to process life-or-death states and display real-time results on an LED grid. This project showcases hardware-software integration, physical circuit design, and low-level system communication.",
+    desc: "An automaton simulator based on Conway's Game of Life with a unique algorithmic twist. Built using C++ to operate an Arduino UNO R4 microcontroller, it stores and computes cell generations based on custom game logic. A physical circuit, built entirely from NPN transistors, interacts seamlessly with the software to process states and display real-time results on an LED grid.",
     tags: ["C++", "Arduino UNO R4"],
     githubLink:
       "https://github.com/WhiteWolf1603/alices-game-of-life/blob/main/README.md",
@@ -73,7 +75,7 @@ const projects = [
   {
     imgSrc: taskManager,
     title: "Task Manager App",
-    desc: "A full-stack Task Manager app that lets users create, update, delete, and mark tasks as completed. It offers data persistence with MongoDB. Users can manage tasks easily with features like adding descriptions and marking completion.",
+    desc: "A full-stack Task Manager app that allows users to easily manage their daily tasks. It features full CRUD capabilities, letting users create, update, delete, and mark tasks as completed, with a responsive interface designed for daily productivity.",
     tags: ["JS", "HTML", "CSS", "MongoDB", "REST API"],
     githubLink: "https://github.com/ShambhaviGoyal/task-manager",
     projectLink:
@@ -81,8 +83,8 @@ const projects = [
   },
   {
     imgSrc: pintosLogo,
-    title: "Pintos Operating System (Stanford)",
-    desc: "Implemented the threading component of the OS kernel, including synchronization primitives and thread scheduling—notably the Multilevel Feedback Queue Scheduler (MLFQS). Built the system-call interface with argument validation, safe user-memory access, and kernel/user mode transitions; implemented system calls and process control logic.",
+    title: "Pintos Operating System",
+    desc: "Implemented the threading component of the OS kernel, including synchronization primitives, thread scheduling, and the Multilevel Feedback Queue Scheduler. Built the system-call interface with argument validation, safe user-memory access, and kernel/user mode transitions.",
     tags: ["C", "Pintos", "Kernel", "Scheduling", "System calls", "Synchronization"],
     githubLink: "https://github.com/ShambhaviGoyal/Pintos",
   },
@@ -92,41 +94,25 @@ const Projects = () => {
   return (
     <section id="projects" className="section">
       <div className="container-wide">
-        <header className="mb-10 flex max-w-2xl flex-col gap-4 border-b border-zinc-200/90 pb-10 dark:border-zinc-800 lg:max-w-none lg:flex-row lg:items-end lg:justify-between lg:gap-8">
-          <div className="max-w-xl">
-            <p className="section-eyebrow mb-3 reveal-up">Projects</p>
-            <h2 className="section-heading reveal-up">Projects built end-to-end.</h2>
-          </div>
-          <p className="section-lead-tight reveal-up lg:max-w-md lg:text-right">
-            Selected builds from coursework, and side projects.
-          </p>
+        <header className="section-header">
+          <p className="eyebrow reveal-up mb-2">Projects</p>
+          <h2 className="heading reveal-up">Things I&apos;ve built.</h2>
         </header>
 
-        <ol className="flex list-none flex-col gap-5 lg:gap-6">
-          {projects.map(({ imgSrc, title, desc, tags, githubLink, projectLink }, index) => (
-            <li key={title} className="reveal-up">
-              <div className="flex gap-4 sm:gap-6">
-                <span
-                  className="type-nav-index hidden w-8 shrink-0 pt-1 text-right font-mono sm:block"
-                  aria-hidden
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <ProjectCard
-                    imgSrc={imgSrc}
-                    title={title}
-                    desc={desc}
-                    tags={tags}
-                    githubLink={githubLink}
-                    projectLink={projectLink}
-                    variant="list"
-                  />
-                </div>
-              </div>
-            </li>
+        <div className="grid grid-cols-1 gap-3.5 md:grid-cols-2 md:gap-4">
+          {projects.map(({ imgSrc, title, desc, tags, githubLink, projectLink }) => (
+            <div key={title} className="reveal-up">
+              <ProjectCard
+                imgSrc={imgSrc}
+                title={title}
+                desc={desc}
+                tags={tags}
+                githubLink={githubLink}
+                projectLink={projectLink}
+              />
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
     </section>
   );

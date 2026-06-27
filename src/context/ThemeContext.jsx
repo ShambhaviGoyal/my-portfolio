@@ -22,7 +22,7 @@ export function ThemeProvider({ children }) {
     localStorage.setItem(STORAGE_KEY, theme);
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
-      meta.setAttribute("content", isDark ? "#09090b" : "#f4f4f5");
+      meta.setAttribute("content", isDark ? "#0c0a09" : "#faf9f7");
     }
   }, [theme]);
 

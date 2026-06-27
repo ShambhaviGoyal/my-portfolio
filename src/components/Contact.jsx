@@ -1,10 +1,26 @@
 const socialLinks = [
   {
+    href: "mailto:shambhavigoyal88@gmail.com",
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden
+      >
+        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
+      </svg>
+    ),
+    label: "Email"
+  },
+  {
     href: "https://github.com/ShambhaviGoyal",
     icon: (
       <svg
-        width="22"
-        height="22"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -16,14 +32,14 @@ const socialLinks = [
         />
       </svg>
     ),
-    alt: "GitHub",
+    label: "Github"
   },
   {
     href: "https://www.linkedin.com/in/shambhavigoyal/",
     icon: (
       <svg
-        width="22"
-        height="22"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -35,14 +51,14 @@ const socialLinks = [
         />
       </svg>
     ),
-    alt: "LinkedIn",
+    label: "LinkedIn"
   },
   {
     href: "https://www.instagram.com/shambhavigoyal/",
     icon: (
       <svg
-        width="22"
-        height="22"
+        width="24"
+        height="24"
         viewBox="0 0 25 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -54,104 +70,42 @@ const socialLinks = [
         />
       </svg>
     ),
-    alt: "Instagram",
+    label: "Instagram"
   },
 ];
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden border-t border-zinc-200/80 bg-zinc-50/50 pt-24 pb-16 dark:border-zinc-800 dark:bg-zinc-950/80 lg:pt-32 lg:pb-24"
-    >
-      <div className="container-wide relative grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
-        <div>
-          <p className="section-eyebrow reveal-up">Contact</p>
-          <h2 className="section-heading mt-4 reveal-up">Say hello.</h2>
-          <p className="section-lead mt-6 max-w-md reveal-up">
-            If you want to chat about an opportunity or you&apos;ve got a question about
-            something here, send a note. Would love to chat!
+    <section id="contact" className="section section--tight-top">
+      <div className="container-wide">
+        <div className="card reveal-up overflow-hidden p-4 text-center sm:p-5">
+          <p className="eyebrow mb-2 justify-center">Contact</p>
+
+          <h2 className="mx-auto max-w-2xl font-display text-2xl font-semibold tracking-tight text-theme-text dark:text-themeDark-text sm:text-4xl">
+            Let&apos;s build something together.
+          </h2>
+
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-theme-muted dark:text-themeDark-muted sm:text-base">
+            Whether you have a question, want to chat about an opportunity, or
+            just want to say hi, please feel free to reach out! I&apos;d love
+            to hear from you.
           </p>
 
-          <div className="mt-10 reveal-up">
-            <p className="type-overline">Direct</p>
-            <a
-              href="mailto:shambhavigoyal88@gmail.com"
-              className="type-contact-email"
-            >shambhavigoyal88@gmail.com
-            </a>
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-2">
-            {socialLinks.map(({ href, icon, alt }) => (
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            {socialLinks.map(({ href, icon, label }) => (
               <a
-                key={alt}
+                key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={alt}
-                className="reveal-up grid h-12 w-12 place-items-center rounded-2xl border border-zinc-200 bg-zinc-50 text-zinc-600 transition hover:border-zinc-300 hover:bg-white hover:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-white"
+                className="group inline-flex items-center gap-2 rounded-full border border-theme-border px-4 py-2 text-sm font-medium text-theme-muted transition-colors hover:border-theme-text/30 hover:text-theme-text dark:border-themeDark-border dark:text-themeDark-muted dark:hover:border-themeDark-text/30 dark:hover:text-themeDark-text"
               >
-                {icon}
+                <span className="[&>svg]:h-[18px] [&>svg]:w-[18px]">{icon}</span>
+                {label}
               </a>
             ))}
           </div>
         </div>
-
-        <form
-          action="https://getform.io/f/aolmdlqb"
-          method="POST"
-          className="reveal-up rounded-3xl border border-zinc-200/90 bg-zinc-50/80 p-6 shadow-md backdrop-blur-xl dark:border-zinc-700 dark:bg-zinc-900/60 sm:p-8"
-        >
-          <div className="grid gap-4 md:grid-cols-2">
-            <div>
-              <label htmlFor="name" className="label">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                autoComplete="name"
-                required
-                placeholder="Your name"
-                className="text-field"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="label">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                autoComplete="email"
-                required
-                placeholder="you@example.com"
-                className="text-field"
-              />
-            </div>
-          </div>
-
-          <div className="mt-4">
-            <label htmlFor="message" className="label">
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="hello!"
-              required
-              className="text-field min-h-36 max-h-80 resize-y"
-            />
-          </div>
-
-          <button type="submit" className="btn btn-primary mt-6 w-full max-w-none justify-center">
-            Send message
-            <span className="material-symbols-rounded !pr-0 text-[18px]">send</span>
-          </button>
-        </form>
       </div>
     </section>
   );

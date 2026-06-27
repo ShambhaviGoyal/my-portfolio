@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 import { setRootLenis } from "../utils/rootLenis";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 /**
  * Lenis smooth scroll does not update native scrollTop, so ScrollTrigger must

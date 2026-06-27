@@ -12,12 +12,12 @@ const ScrollProgress = () => {
 
   return (
     <div
-      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[3px]"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5"
       aria-hidden
     >
       <div
         ref={barRef}
-        className="h-full origin-left scale-x-0 bg-gradient-to-r from-sky-400 via-violet-400 to-cyan-300 shadow-[0_0_20px_rgba(56,189,248,0.45)] motion-reduce:hidden"
+        className="h-full origin-left scale-x-0 bg-theme-accent motion-reduce:hidden dark:bg-themeDark-accent"
       />
     </div>
   );
