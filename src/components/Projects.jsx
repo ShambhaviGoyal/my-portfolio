@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Warehouse Robot RL Lab",
     desc: "An interactive reinforcement-learning lab that runs entirely in the browser. Q-learning, SARSA, Expected SARSA, and Double Q-learning agents learn to pick up and deliver items in a warehouse grid world while you watch. Includes a map editor, an exact optimal-path planner as a benchmark, and a multi-seed comparison with mean ± std learning curves.",
-    tags: ["TypeScript", "Reinforcement Learning", "Q-learning", "SARSA", "Canvas", "Vite", "Vitest"],
+    tags: ["TypeScript", "Reinforcement Learning", "Q-learning", "SARSA"],
     githubLink: "https://github.com/ShambhaviGoyal/warehouse-robot-rl",
     projectLink: "https://shambhavigoyal.github.io/warehouse-robot-rl/",
   },
