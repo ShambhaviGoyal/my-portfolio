@@ -11,6 +11,13 @@ import settleUp from "../images/settle-up.jpg";
 
 const projects = [
   {
+    title: "Warehouse Robot RL Lab",
+    desc: "An interactive reinforcement-learning lab that runs entirely in the browser. Q-learning, SARSA, Expected SARSA, and Double Q-learning agents learn to pick up and deliver items in a warehouse grid world while you watch. Includes a map editor, an exact optimal-path planner as a benchmark, and a multi-seed comparison with mean ± std learning curves.",
+    tags: ["TypeScript", "Reinforcement Learning", "Q-learning", "SARSA", "Canvas", "Vite", "Vitest"],
+    githubLink: "https://github.com/ShambhaviGoyal/warehouse-robot-rl",
+    projectLink: "https://shambhavigoyal.github.io/warehouse-robot-rl/",
+  },
+  {
     imgSrc: drowsinessDetector,
     title: "Driver Assistance System",
     desc: "It monitors real-time driver behavior to prevent accidents. Using a custom-trained Convolutional Neural Network (CNN) alongside MediaPipe's 3D facial geometry mapping, it processes live webcam feeds to detect drowsiness, distraction, and yawning. It features dynamic 'Driver Focus Score' analytics and an integrated audio alarm system.",
